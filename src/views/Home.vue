@@ -13,7 +13,7 @@
           <h1 class="mb-4" v-text="'Welcome'" />
           <router-link v-if="!isAuthenticated" to="/signup" class="btn-mktg mb-3">Signup</router-link>
           <router-link v-else to="/report" class="btn-mktg mb-3">Report</router-link>
-          <p v-if="!isAuthenticated">Or, <router-link to="/login">log in</router-link></p> 
+          <p v-if="!isAuthenticated">Or, <router-link to="/login">Log in</router-link></p> 
         </div>
       </div>
     </div>
@@ -37,7 +37,28 @@
         </div>
       </div>
     </div>
-    <Footer />
+    <div class="container-lg p-responsive overflow-hidden">
+      <div class="overflow-hidden py-10 border-bottom">
+        <div class="col-md-6 float-right pr-md-6 pr-lg-6 text-center">
+          <div class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2" style="height: 500px;" />
+        
+        
+        </div>
+        <div class="col-md-6 float-left pl-md-6 pl-lg-6">
+          <h2>Why HealthChecker is free?</h2>
+          <h5>You can use this application free of charge to prevent epidemics. With this application we have developed to protect the health of your employees and customers in your workplace, you can prevent epidemic diseases such as Covid 19.</h5>
+          <h5>One of the main reasons why this application is free is that approximately 6.53 million people died in Covid-19, we decided to make this application free so that more people would not die.</h5>
+        
+        </div>
+      </div>
+      <div class="overflow-hidden py-10">
+        <div class="col-md-6 float-left pr-md-6 pr-lg-6 mb-6" style="padding-left: 3%" >
+          <iframe  width="890" height="500" src="https://www.youtube.com/embed/bPITHEiFWLc" style="text-align:center"></iframe>
+          
+        </div>
+      </div>
+    </div>
+    <Footer/> 
   </div>
 </template>
 
@@ -55,7 +76,7 @@ export default {
 
 <style scoped lang="scss">
 .hero {
-  background: linear-gradient(#f05674 70%, rgba(176, 0, 0, 0.4));
+  background: linear-gradient(#fa748f 70%, rgba(176, 0, 0, 0.4));
   background-size: cover;
   background-position: center;
 }
