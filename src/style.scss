@@ -157,9 +157,12 @@ textarea {
 }
 
 .eyebrow {
-  text-transform: uppercase;
   letter-spacing: 2px;
+  white-space: nowrap;
+  padding-left: 50%;
+  
 }
+
 
 .text-justify {
   text-align: justify;

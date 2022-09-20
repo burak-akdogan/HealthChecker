@@ -7,7 +7,9 @@
     <div class="hero py-10">
       <div class="container-lg p-responsive pt-10">
         <div class="col-md-5">
-          <h6 class="eyebrow mb-4">HealthChecker</h6>
+          <h1 class="eyebrow mb-4">HEALTHCHECKER</h1>
+          <h2 class="eyebrow mb-3">Protect Your Employees And Customers.</h2>
+          <br>
           <h1 class="mb-4" v-text="'Welcome'" />
           <router-link v-if="!isAuthenticated" to="/signup" class="btn-mktg mb-3">Signup</router-link>
           <router-link v-else to="/report" class="btn-mktg mb-3">Report</router-link>
@@ -58,7 +60,7 @@ export default {
 
 <style scoped lang="scss">
 .hero {
-  background: linear-gradient(rgba(255, 129, 129, 0.807) 70%, rgba(176, 0, 0, 0.4));
+  background: linear-gradient(#f05674 70%, rgba(176, 0, 0, 0.4));
   background-size: cover;
   background-position: center;
 }
