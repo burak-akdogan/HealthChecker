@@ -156,11 +156,16 @@ textarea {
   background: $bg-input !important;
 }
 
-.eyebrow {
+.eyebrow-mb-4 {
   letter-spacing: 2px;
   white-space: nowrap;
-  padding-left: 50%;
+  padding-left: 70%;
   
+  
+}
+.eyebrow-mb-3{
+  white-space: nowrap;
+  padding-left: 50%;
 }
 
 
