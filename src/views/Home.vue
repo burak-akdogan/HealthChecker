@@ -48,6 +48,7 @@
 </template>
 
 <script>
+  
 export default {
   computed: {   
     isAuthenticated() {
