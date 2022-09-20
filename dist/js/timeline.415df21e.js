@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["timeline"],{c66d:function(e,r,a){"use strict";a.r(r);var s=function(){var e=this,r=e.$createElement,a=e._self._c||r;return a("div",{staticClass:"pb-8"},[a("Cover",{key:e.$route.params.username,attrs:{username:e.$route.params.username}}),a("Stories",{key:"_"+e.$route.params.username,attrs:{username:e.$route.params.username}})],1)},t=[],n=a("2877"),u={},o=Object(n["a"])(u,s,t,!1,null,null,null);r["default"]=o.exports}}]);
+//# sourceMappingURL=timeline.415df21e.js.map

@@ -1,0 +1,180 @@
+@import 'vars.scss';
+@import '~@primer/css/index.scss';
+@import '~//at.alicdn.com/t/font_1601044_rs7l22vasp.css';
+@import 'fonts.scss';
+
+html, body, #app {
+  background-color: $bg-color;
+  min-height: 100vh;
+  color: $color;
+}
+
+a {
+  color: $primary;
+
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+h1 {
+  font-size: 46px;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-size: 34px;
+  margin-bottom: 0.6em;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 1.2em;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+h1, h2, h3 {
+  color: $white;
+  font-family: $font-mktg;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.input-lg {
+  padding: 0 8px;
+  font-size: $body-font-size;
+  height: 48px;
+  line-height: 48px;
+}
+
+.flash {
+  font-size: $font-size-small;
+  border-radius: $border-radius;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $gray-200;
+  border: 0;
+  background-clip: padding-box;
+
+  &:hover {
+    background-color: $gray-400;
+  }
+}
+
+.vue-ui-loading-indicator {
+  background-color: transparent !important;
+
+  .animation {
+    border-color: transparentize($primary, 0.8);
+    border-width: 4px !important;
+    width: 28px !important;
+    height: 28px !important;
+    border-right-color: $primary;
+  }
+}
+
+.iconfont {
+  font-size: 26px;
+  line-height: 26px;
+  vertical-align: text-bottom;
+}
+
+.border, [class*="border-"] {
+  border-color: $border-color !important;
+}
+
+.btn-mktg, .btn-outline-mktg {
+  text-align: center;
+  padding: 0 26px;
+  border-radius: 26px;
+  height: 52px;
+  font-size: 20px;
+  line-height: 52px;
+  display: inline-block;
+  box-shadow: none !important;
+}
+
+.btn-mktg {
+  background-color: $primary;
+  border-color: $primary;
+
+  &:hover, &:focus {
+    background-color: $primary-100;
+    border-color: $primary;
+  }
+}
+
+.btn-outline-mktg {
+  color: $white;
+  background-color: transparent;
+  border: 1px solid $border-color;
+
+  &:hover {
+    color: $primary;
+    border-color: $primary;
+  }
+}
+
+i.btn-mktg, i.btn-outline-mktg {
+  font-size: 26px;
+  min-width: 52px;
+}
+
+.form-control {
+  padding-left: 22px;
+  padding-right: 22px;
+  border-radius: 26px;
+  background: $bg-input;
+  border: none;
+  color: white;
+  font-size: 22px;
+  min-height: 52px;
+  width: 100% !important;
+}
+
+textarea {
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+  line-height: 1.4em !important;
+}
+
+.input-lg {
+  background: $bg-input !important;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+label {
+  font-weight: normal;
+}
+
+.flash {
+  font-size: 20px;
+  border: none;
+  border-radius: 26px !important;
+}
+
+.text-primary {
+  color: $primary;
+}
