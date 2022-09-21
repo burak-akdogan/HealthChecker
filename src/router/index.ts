@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import { ifAuthenticated, ifNotAuthenticated } from '@/helpers/utils';
+import { ifAuthenticated, ifNotAuthenticated } from '@/helpers/utils'; /*Login Page */
 
 const Home = () => import(/* webpackChunkName: "home" */ '@/views/Home.vue');
 const Signup = () => import(/* webpackChunkName: "signup" */ '@/views/Signup.vue');
