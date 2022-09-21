@@ -1,9 +1,9 @@
 <template>
   <div class="container-sm p-responsive">
     <div class="text-center mb-4">
-      <img src="~/@/assets/logo.svg" style="max-width: 220px;" />
+      <img src="~/@/assets/logov4.png" style="max-width: 480px;" />
     </div>
-    <h4 class="text-center eyebrow mb-4" v-text="'login'" />
+    <h4 class="text-center eyebrow mb-4" v-text="'Login'" />
     <form @submit.prevent="handleSubmit" style="max-width: 360px;" class="mx-auto">
       <dl class="form-group">
         <input
@@ -27,10 +27,10 @@
           type="submit"
           class="btn-mktg btn-block"
           :disabled="isLoading"
-          v-text="'login'"
+          v-text="'Login'"
         />
       </div>
-      <dl class="form-group text-center">Or, <router-link to="/signup">sign up</router-link></dl>
+      <dl class="form-group text-center">Or, <router-link to="/signup">Sign up</router-link></dl>
     </form>
   </div>
 </template>
