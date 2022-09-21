@@ -1,6 +1,8 @@
+
 <template>
   <div id="app" :class="!isInterface && 'd-flex flex-items-center'">
     <div v-if="isLoading" class="overlay big vue-ui-loading-indicator p-6">
+      
     </div>
     <div :class="isInterface ? 'container-lg height-full' : 'width-full'" v-else>
       <Sidebar v-if="isInterface" :class="isHeadless && 'hide-sm hide-md hide-lg'" />
