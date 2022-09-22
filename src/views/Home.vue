@@ -20,11 +20,12 @@
     <div class="container-lg p-responsive overflow-hidden">
       <div class="overflow-hidden py-10 border-bottom">
         <div class="col-md-6 float-left pr-md-6 pr-lg-6 text-center">
-          <div class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2" style="height: 500px;" />
+          <img class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2 border" src="~/@/assets/firstpic.png" style="height: 500px;" />
         </div>
         <div class="col-md-6 float-left pl-md-6 pl-lg-6">
           <h2>Why HealthChecker is free?</h2>
           <h5>You can use this application free of charge to prevent epidemics. With this application we have developed to protect the health of your employees and customers in your workplace, you can prevent epidemic diseases such as Covid 19.</h5>
+          <br>
           <h5>One of the main reasons why this application is free is that approximately 6.53 million people died in Covid-19, we decided to make this application free so that more people would not die.</h5>
           
         </div>
@@ -40,15 +41,15 @@
     <div class="container-lg p-responsive overflow-hidden">
       <div class="overflow-hidden py-10 border-bottom">
         <div class="col-md-6 float-right pr-md-6 pr-lg-6 text-center">
-          <div class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2" style="height: 500px;" />
+          <div class="bg-blue mx-auto ml-2 hide-sm  hide-md rounded-2" style="height: 500px;" />
         
         
         </div>
-        <div class="col-md-6 float-left pl-md-6 pl-lg-6">
-          <h2>Why HealthChecker is free?</h2>
-          <h5>You can use this application free of charge to prevent epidemics. With this application we have developed to protect the health of your employees and customers in your workplace, you can prevent epidemic diseases such as Covid 19.</h5>
-          <h5>One of the main reasons why this application is free is that approximately 6.53 million people died in Covid-19, we decided to make this application free so that more people would not die.</h5>
-        
+        <div class="col-md-6 float-left pr-md-6 pr-lg-6  text-center">
+        <div class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2" style="height: 500px;">
+         
+         
+        </div>
         </div>
       </div>
       <div class="overflow-hidden py-10">
