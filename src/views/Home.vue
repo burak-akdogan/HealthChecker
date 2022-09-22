@@ -26,11 +26,11 @@
           <h2>Why HealthChecker is free?</h2>
           <h5>You can use this application free of charge to prevent epidemics. With this application we have developed to protect the health of your employees and customers in your workplace, you can prevent epidemic diseases such as Covid 19.</h5>
           <br>
-          <h5>One of the main reasons why this application is free is that approximately 6.53 million people died in Covid-19, we decided to make this application free so that more people would not die.</h5>
-          
+          <h5>One of the main reasons why this application is free is that approximately 6.53 million people died in Covid-19, we decided to make this application free so that more people would not die.</h5> 
         </div>
       </div>
-      <div class="overflow-hidden py-10">
+<!-- Section two -->
+      <div class="overflow-hidden py-7">
         <div class="col-md-6 float-left pr-md-6 pr-lg-6 mb-6" >
           <h2>Do you want to contribute too?</h2>
           <h5 style="white-space: nowrap;">By sharing HealthChecker on social media platforms, you can get more people to see HealthChecker.</h5>
@@ -42,16 +42,13 @@
       <div class="overflow-hidden py-10 border-bottom">
         <div class="col-md-6 float-right pr-md-6 pr-lg-6 text-center">
           <div class="bg-blue mx-auto ml-2 hide-sm  hide-md rounded-2" style="height: 500px;" />
-        
-        
         </div>
         <div class="col-md-6 float-left pr-md-6 pr-lg-6  text-center">
-        <div class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2" style="height: 500px;">
-         
-         
+        <div class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2" style="height: 500px;">  
         </div>
         </div>
       </div>
+      <!-- Section two ends -->
       <div class="overflow-hidden py-10">
         <div class="col-md-6 float-left pr-md-6 pr-lg-6 mb-6" style="padding-left: 3%" >
           <iframe  width="890" height="500" src="https://www.youtube.com/embed/bPITHEiFWLc" style="text-align:center"></iframe>
