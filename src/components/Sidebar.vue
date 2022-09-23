@@ -1,13 +1,13 @@
 <template>
   <div id="sidebar" class="position-fixed py-lg-4">
-    <router-link class="hide-sm hide-md hide-lg" :to="`/${model}`">
-      <img src="~/@/assets/onlylogo.png" style="max-width: 220px;" class="mb-2" />
+    <router-link :to="`/`" class="hide-sm hide-md hide-lg" >
+      <img  src="~/@/assets/onlylogo.png" style="max-width: 220px;" class="mb-2 anim-pulse" />
     </router-link>
     <ul class="list-style-none border-top border-lg-top-0 text-center text-lg-left">
       <li class="col-3 col-lg-12">
         <router-link :to="`/`" class="p-3 d-block">
           <Icon name="home" />
-          <span class="hide-sm hide-md hide-lg ml-3" v-text="'home'" />
+          <span class="hide-sm hide-md hide-lg ml-3" v-text="'Home'" />
         </router-link>
       </li>
       <li class="col-3 col-lg-12" >
@@ -19,13 +19,13 @@
       <li class="col-3 col-lg-12" >
         <router-link :to="`/${account.username}`" class="p-3 d-block">
           <Icon name="user" />
-          <span class="hide-sm hide-md hide-lg ml-3" v-text="'profile'" />
+          <span class="hide-sm hide-md hide-lg ml-3" v-text="'Profile'" />
         </router-link>
       </li>
       <li class="col-3 col-lg-12">
         <router-link to="/settings" class="p-3 d-block">
           <Icon name="settings" />
-          <span class="hide-sm hide-md hide-lg ml-3" v-text="'settings'" />
+          <span class="hide-sm hide-md hide-lg ml-3" v-text="'Settings'" />
         </router-link>
       </li>
     </ul>
@@ -56,7 +56,7 @@ export default {
     color: $color;
 
     &.router-link-exact-active {
-      color: white;
+      color: rgb(255, 0, 0);
     }
   }
 

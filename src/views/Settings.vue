@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Top :title="'settings'" />
+    <Top :title="'Settings'" />
     <div>
       <a
         @click="logout"
         class="d-flex border-bottom v-align-middle px-4 py-3 text-red"
-        v-text="'logout'"
+        v-text="'Logout'"
       />
     </div>
   </div>

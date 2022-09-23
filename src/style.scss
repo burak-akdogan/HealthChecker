@@ -39,7 +39,7 @@ h4 {
 }
 
 h1, h2, h3 {
-  color: $white;
+  color: $black;
   font-family: $font-mktg;
 }
 
@@ -119,9 +119,9 @@ h6 {
 }
 
 .btn-outline-mktg {
-  color: $white;
+  color: $black;
   background-color: transparent;
-  border: 1px solid $border-color;
+  border: 2px solid $border-color;
 
   &:hover {
     color: $primary;

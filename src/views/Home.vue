@@ -1,18 +1,18 @@
 <template>
   <div>
-    <div class="anim-pulse top-0 left-0 p-4 position-absolute">
+    <div class="top-0 left-0 p-4 position-absolute">
       <img src="~/@/assets/logov4.png" style="max-width: 500px;" />
     </div>
    
     <div class="hero py-10">
       <div class="container-lg p-responsive pt-10">
         <div class="col-md-5">
-          <h1 class="eyebrow-mb-4">HEALTHCHECKER</h1>
+          <h1 class="eyebrow-mb-4" >HEALTHCHECKER</h1>
           <h2 class="eyebrow-mb-3">Protect Your Employees And Customers.</h2>
           <br>
-          <h1 class="mb-4" v-text="'Welcome'" />
-          <router-link v-if="!isAuthenticated" to="/signup" class="btn-mktg mb-3">Signup</router-link>
-          <router-link v-else to="/report" class="btn-mktg mb-3">Report</router-link>
+          <h1 class="mb-4"  v-text="'Welcome'"/> 
+          <router-link v-if="!isAuthenticated" to="/signup" class="btn-mktg mb-3">Signup </router-link>
+          <router-link v-else to="/report" class="btn-mktg mb-3">Report </router-link>
           <p v-if="!isAuthenticated">Or, <router-link to="/login">Log in</router-link></p> 
         </div>
       </div>
@@ -21,7 +21,7 @@
     <div class="anim-fade-in container-lg p-responsive overflow-hidden">
       <div class="overflow-hidden py-10 border-bottom">
         <div class="col-md-6 float-left pr-md-6 pr-lg-6 text-center">
-          <img class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2 border" src="~/@/assets/firstpic.png" style="height: 500px;" />
+          <img class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2 border " src="~/@/assets/firstpic.png" style="height: 500px;" />
         </div>
         <div class="col-md-6 float-left pl-md-6 pl-lg-6">
           <h2>Why HealthChecker is free?</h2>
@@ -43,16 +43,17 @@
     <div class="container-lg p-responsive overflow-hidden">
       <div class="overflow-hidden py-10 border-bottom">
         <div class="col-md-6 float-right pr-md-6 pr-lg-6 text-center">
-          <div class="bg-blue mx-auto ml-2 hide-sm  hide-md rounded-2" style="height: 500px;" />
+          <div class="bg-blue mx-auto ml-2 hide-sm  hide-md rounded-2" style="height: 500px;" />    <!--right-->
         </div>
         <div class="col-md-6 float-left pr-md-6 pr-lg-6  text-center"> 
-        <div class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2" style="height: 500px;">  
+        <div class="bg-red mx-auto ml-2 hide-sm hide-md rounded-2" style="height: 500px;">           <!--left-->
         </div>
         </div>
       </div>
       <!-- Section two ends -->
 <!-- Section tree starts -->
 
+   
       <!-- Section tree ends -->
 
       <div class="overflow-hidden py-10">

@@ -1,7 +1,7 @@
 <template>
   <div >
     <Top :title="'Self Report'" />
-    <div class="Box-footer">
+    <div class="Box-footer ">
     <div v-if="hasReported">You already reported today!</div>
     <div v-else>
       <div style="border: 2px solid ;padding: 20px; border-radius: 25px; background: grey;">
