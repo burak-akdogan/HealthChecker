@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <Top  :title="'Self Report'" />
-    
+  <div >
+    <Top :title="'Self Report'" />
+    <div class="Box-footer">
     <div v-if="hasReported">You already reported today!</div>
     <div v-else>
       <div style="border: 2px solid ;padding: 20px; border-radius: 25px; background: grey;">
@@ -19,11 +19,12 @@
       <div v-if="step===6">6) Have you recently received a positive result on an at-home rapid test?</div>
 
       <div v-if="step===7">7) Are you currently awaiting results from a COVID-19 test?</div>
+      <br>
       <div v-if="step!==8"><button  class="btn-outline-mktg" @click="setQuestion('Yes')">Yes</button> <button class="btn-outline-mktg" @click="setQuestion('No')">No</button></div>
       <br>
       <button :disabled="step!==8" class="btn-mktg mb-3" @click="submitReport()">Submit</button>
     </div>
-  </div></div>
+  </div></div></div>
 </template>
 
 <script>
