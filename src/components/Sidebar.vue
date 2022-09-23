@@ -24,7 +24,7 @@
       </li>
       <li class="col-3 col-lg-12">
         <router-link to="/settings" class="p-3 d-block">
-          <Icon name="settings" />
+          <Icon name="settings"/>
           <span class="hide-sm hide-md hide-lg ml-3" v-text="'Settings'" />
         </router-link>
       </li>
