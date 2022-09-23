@@ -24,9 +24,9 @@
         </div>
         <div class="col-md-6 float-left pl-md-6 pl-lg-6">
           <h2>Why HealthChecker is free?</h2>
-          <h5>You can use this application free of charge to prevent epidemics. With this application we have developed to protect the health of your employees and customers in your workplace, you can prevent epidemic diseases such as Covid 19.</h5>
+          <h5>HealthChecker is developed to protect the health of your employees and customers in your workplace in order to prevent epidemic diseases such as Covid 19. Aapproximately 6.53 million people died during the Covid-19 pandemic, therefore we have decided to make this application free of cost. </h5>
           <br>
-          <h5>One of the main reasons why this application is free is that approximately 6.53 million people died in Covid-19, we decided to make this application free so that more people would not die.</h5> 
+          <h5>You can also use this application to protect your employees and customers from other epidemics such as monkeypox and ebola.</h5> 
         </div>
       </div>
 <!-- Section two -->
