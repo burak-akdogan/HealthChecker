@@ -81,7 +81,7 @@ export default {
 
 <style scoped lang="scss">
 .hero {
-  background: linear-gradient(#fa748f 70%, rgba(176, 0, 0, 0.4));
+  background: linear-gradient(#ee4365 70%, rgba(12, 7, 7, 0.925));
   background-size: cover;
   background-position: center;
 }
