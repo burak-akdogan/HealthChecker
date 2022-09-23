@@ -50,7 +50,7 @@
       </div>
       <!-- Section two ends -->
       <div class="overflow-hidden py-10">
-        <div class="col-md-6 float-left pr-md-6 pr-lg-6 mb-6" style="padding-left: 3%" >
+        <div class="col-md-6 float-left pr-md-6 pr-lg-6 mb-6"  style="padding-left: 3%" >
           <iframe  width="890" height="500" src="https://www.youtube.com/embed/bPITHEiFWLc" style="text-align:center"></iframe>
           
         </div>
