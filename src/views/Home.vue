@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="top-0 left-0 p-4 position-absolute">
+    <div class="anim-pulse top-0 left-0 p-4 position-absolute">
       <img src="~/@/assets/logov4.png" style="max-width: 500px;" />
     </div>
    
@@ -17,7 +17,8 @@
         </div>
       </div>
     </div>
-    <div class="container-lg p-responsive overflow-hidden">
+<!-- Section one -->
+    <div class="anim-fade-in container-lg p-responsive overflow-hidden">
       <div class="overflow-hidden py-10 border-bottom">
         <div class="col-md-6 float-left pr-md-6 pr-lg-6 text-center">
           <img class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2 border" src="~/@/assets/firstpic.png" style="height: 500px;" />
@@ -29,6 +30,7 @@
           <h5>You can also use this application to protect your employees and customers from other epidemics such as monkeypox and ebola.</h5> 
         </div>
       </div>
+      <!-- Section one ends -->
 <!-- Section two -->
       <div class="overflow-hidden py-7">
         <div class="col-md-6 float-left pr-md-6 pr-lg-6 mb-6" >
@@ -43,7 +45,7 @@
         <div class="col-md-6 float-right pr-md-6 pr-lg-6 text-center">
           <div class="bg-blue mx-auto ml-2 hide-sm  hide-md rounded-2" style="height: 500px;" />
         </div>
-        <div class="col-md-6 float-left pr-md-6 pr-lg-6  text-center">
+        <div class="col-md-6 float-left pr-md-6 pr-lg-6  text-center"> 
         <div class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2" style="height: 500px;">  
         </div>
         </div>
