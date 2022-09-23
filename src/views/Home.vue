@@ -7,7 +7,7 @@
     <div class="hero py-10">
       <div class="container-lg p-responsive pt-10">
         <div class="col-md-5">
-          <h1 class="eyebrow-mb-4" >HEALTHCHECKER</h1>
+          <h1 class="eyebrow-mb-4">HEALTHCHECKER</h1>
           <h2 class="eyebrow-mb-3">Protect Your Employees And Customers.</h2>
           <br>
           <h1 class="mb-4"  v-text="'Welcome'"/> 

@@ -3,8 +3,8 @@
     <div class="container-lg p-responsive d-flex">
       <div class="flex-auto">HealthChecker © 2022</div>
       <div>
-        <a v-for="(link, i) in links" :key="i" :href="link" class="text-white" target="_blank">
-          <Icon :name="i" class="ml-4" />
+        <a v-for="(link, i) in links" :key="i" :href="link" class="text-black" target="_blank">
+          <Icon :name="i" class="ml-4 " />
         </a>
       </div>
     </div>
@@ -20,8 +20,10 @@ export default {
       pkg,
       links: {
         instagram: 'https://www.instagram.com/healthcheck__',
-        facebook: 'https://www.facebook.com/profile.php?id=100005515518488',
-        amazon: 'https://www.amazon.com/gp/registry/wishlist/1ZLGDOANI46KD/ref=cm_wl_huc_view'
+        facebook: 'https://www.facebook.com/',
+        amazon: 'https://www.amazon.com/gp/registry/wishlist/1ZLGDOANI46KD/ref=cm_wl_huc_view',
+        
+        
       }
     };
   }
