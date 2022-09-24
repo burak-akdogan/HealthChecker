@@ -1,22 +1,21 @@
 <template>
   <div>
     <div class="top-0 left-0 p-4 position-absolute">
-      <img src="~/@/assets/logov4.png" style="max-width: 500px;" />
     </div>
-   
     <div class="hero py-10">
       <div class="container-lg p-responsive pt-10">
         <div class="col-md-5">
-          <h1 class="eyebrow-mb-4">HEALTHCHECKER</h1>
+          <div></div><img class="eyebrow-mb-2" src="~/@/assets/logov4.png" ><div></div>
           <h2 class="eyebrow-mb-3">Protect Your Employees And Customers.</h2>
           <br>
           <h1 class="mb-4"  v-text="'Welcome'"/> 
-          <router-link v-if="!isAuthenticated" to="/signup" class="btn-mktg mb-3">Signup </router-link>
-          <router-link v-else to="/report" class="btn-mktg mb-3">Report </router-link>
+          <router-link v-if="!isAuthenticated" to="/signup" class="btn-mktg mb-3 ">Signup </router-link>
+          <router-link v-else to="/report" class="btn-mktg mb-3 ">Report </router-link>
           <p v-if="!isAuthenticated">Or, <router-link to="/login">Log in</router-link></p> 
         </div>
       </div>
     </div>
+    
 <!-- Section one -->
     <div class="anim-fade-in container-lg p-responsive overflow-hidden">
       <div class="overflow-hidden py-10 border-bottom">
@@ -52,22 +51,42 @@
         </div>
       </div>
       <!-- Section two ends -->
+
+
+
 <!-- Section tree starts -->
-<div class="container-lg clearfix ">
-  <div class="col-4 float-right  p-3">
-    <img class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2 border " src="~/@/assets/firstpic.png" style="height: 300px;  "/>
-    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, sequi!1</p> 
-  </div>
-  <div class="col-4 float-right  p-3">
-    <img class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2 border " src="~/@/assets/firstpic.png" style="height: 300px;  "/>
-    <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, sequi!2</p> 
-  </div>
-  <div class="col-4 float-right  p-3">
-    <img class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2 border  " src="~/@/assets/firstpic.png" style="height: 300px; "/>
-    <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, sequi!3</p> 
-  
-  </div>
-</div>
+
+<div class="main-content"></div>
+  <div > 
+    <div class="container">
+      <h1>Why HealthChecker?</h1>
+      <div class="row">
+        <div class="service">
+          <i class="fas fa-briefcase-medical"></i>
+          <h2>IMMEDIATE ACTION</h2>
+          
+        </div>
+        <div class="service">
+          <i class="fas fa-user-shield "></i>
+          <h2>PROTECT YOUR STAFF</h2>
+        </div>
+        <div class="service">
+          <i class="fas fa-file-medical-alt"></i>
+          <h2>MONITOR IN REAL TIME</h2>
+        </div>
+        <div class="service">
+          <i class="fas fa-comment-medical"></i>
+          <h2>PROTECT CUSTOMERS HEALTH</h2>
+        </div>
+        <div class="service">
+          <i class="fas fa-balance-scale"></i>
+          <h2>GUAD THE COMPANY AGAINS LEGAL RISKS</h2>
+        </div>
+        <div class="service">
+          <i class="fas fa-mail-bulk"></i>
+          <h2>GET REPORT EMPLOYEE'S TEST</h2>
+        </div></div></div></div>
+      
    
       <!-- Section tree ends -->
 
