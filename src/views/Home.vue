@@ -42,17 +42,32 @@
     </div>
     <div class="container-lg p-responsive overflow-hidden">
       <div class="overflow-hidden py-10 border-bottom">
-        <div class="col-md-6 float-right pr-md-6 pr-lg-6 text-center">
-          <div class="bg-blue mx-auto ml-2 hide-sm  hide-md rounded-2" style="height: 500px;" />    <!--right-->
+        <div class="col-md-6 float-right pr-md-6 pr-lg-6 text-center"> <!--right-->
+          <div class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2" style="height: 250px; width:250px;" />   <!--right-->
         </div>
-        <div class="col-md-6 float-left pr-md-6 pr-lg-6  text-center"> 
-        <div class="bg-red mx-auto ml-2 hide-sm hide-md rounded-2" style="height: 500px;">           <!--left-->
+        <div class="col-md-6 float-right pr-md-6 pr-lg-12 text-center"> <!--left-->
+        <div class="bg-red mx-auto ml-2 hide-sm hide-md rounded-2" style="height: 250px; width:250px;">   <!--left-->        
+
         </div>
         </div>
       </div>
       <!-- Section two ends -->
 <!-- Section tree starts -->
-
+<div class="container-lg clearfix ">
+  <div class="col-4 float-right  p-3">
+    <img class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2 border " src="~/@/assets/firstpic.png" style="height: 300px;  "/>
+    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, sequi!1</p> 
+  </div>
+  <div class="col-4 float-right  p-3">
+    <img class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2 border " src="~/@/assets/firstpic.png" style="height: 300px;  "/>
+    <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, sequi!2</p> 
+  </div>
+  <div class="col-4 float-right  p-3">
+    <img class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2 border  " src="~/@/assets/firstpic.png" style="height: 300px; "/>
+    <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, sequi!3</p> 
+  
+  </div>
+</div>
    
       <!-- Section tree ends -->
 
