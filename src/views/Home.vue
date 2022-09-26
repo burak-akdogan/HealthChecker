@@ -115,11 +115,10 @@ export default {
 
 <style scoped lang="scss">
 .hero {
-  // background-image: url("https://i.ibb.co/bFkHDtw/Back.png");
-  // background: linear-gradient(#ee4365 70%, rgba(12, 7, 7, 0.925));
+  background-image: url('~@/assets/Back.jpg');
   background-size: cover;
   background-position: center;
-  // background-image: url("C:/Users/burak/OneDrive/Desktop/Healthchecker v2 c/HealthChecker/src/assets/Back.jpg");
-  background-image: url('~@/assets/Back.jpg');
+ // background: linear-gradient(#ee4365 70%, rgba(12, 7, 7, 0.925));
+  
 }
 </style>
