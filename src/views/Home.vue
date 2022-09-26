@@ -1,21 +1,23 @@
 <template>
   <div>
-    <div class="top-0 left-0 p-4 position-absolute">
+    
+    <div class="top-0 left-0 p-4 position-absolute" >
     </div>
-    <div class="hero py-10">
+    <!-- <div class="hero py-6" > -->
+      <div class="hero py-2" >
       <div class="container-lg p-responsive pt-10">
         <div class="col-md-5">
-          <div></div><img class="eyebrow-mb-2" src="~/@/assets/logov4.png" ><div></div>
-          <h2 class="eyebrow-mb-3">Protect Your Employees And Customers.</h2>
+          <div></div><img class="eyebrow-mb-2" src="~/@/assets/logov4.png"><div></div>
+          <h2 class="eyebrow-mb-3" style="color:aliceblue">Protect Your Employees And Customers.</h2>
           <br>
-          <h1 class="mb-4"  v-text="'Welcome'"/> 
-          <router-link v-if="!isAuthenticated" to="/signup" class="btn-mktg mb-3 ">Signup </router-link>
+          <h1 class="mb-4" style="color:aliceblue" v-text="'Welcome'"/> 
+          <router-link v-if="!isAuthenticated" to="/signup" class="btn-mktg mb-3 ">Signup</router-link>
           <router-link v-else to="/report" class="btn-mktg mb-3 ">Report </router-link>
-          <p v-if="!isAuthenticated">Or, <router-link to="/login">Log in</router-link></p> 
+          <p style="color:aliceblue" v-if="!isAuthenticated">Or, <router-link to="/login" >Log in</router-link></p> 
         </div>
       </div>
     </div>
-    
+    <!-- 7f white proxi font use-->
 <!-- Section one -->
     <div class="anim-fade-in container-lg p-responsive overflow-hidden">
       <div class="overflow-hidden py-10 border-bottom">
@@ -24,7 +26,7 @@
         </div>
         <div class="col-md-6 float-left pl-md-6 pl-lg-6">
           <h2>Why HealthChecker is free?</h2>
-          <h5>HealthChecker is developed to protect the health of your employees and customers in your workplace in order to prevent epidemic diseases such as Covid 19. Aapproximately 6.53 million people died during the Covid-19 pandemic, therefore we have decided to make this application free of cost. </h5>
+          <h5>HealthChecker is developed to protect the health of your employees and customers in your workplace in order to prevent epidemic diseases such as Covid 19. Approximately 6.53 million people died during the Covid-19 pandemic, therefore we have decided to make this application free of cost. </h5>
           <br>
           <h5>You can also use this application to protect your employees and customers from other epidemics such as monkeypox and ebola.</h5> 
         </div>
@@ -51,8 +53,6 @@
         </div>
       </div>
       <!-- Section two ends -->
-
-
 
 <!-- Section tree starts -->
 
@@ -115,8 +115,11 @@ export default {
 
 <style scoped lang="scss">
 .hero {
-  background: linear-gradient(#ee4365 70%, rgba(12, 7, 7, 0.925));
+  // background-image: url("https://i.ibb.co/bFkHDtw/Back.png");
+  // background: linear-gradient(#ee4365 70%, rgba(12, 7, 7, 0.925));
   background-size: cover;
   background-position: center;
+  // background-image: url("C:/Users/burak/OneDrive/Desktop/Healthchecker v2 c/HealthChecker/src/assets/Back.jpg");
+  background-image: url('~@/assets/Back.jpg');
 }
 </style>
