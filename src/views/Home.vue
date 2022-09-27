@@ -17,8 +17,8 @@
         </div>
       </div>
     </div>
-    <!-- 7f white proxi font use-->
-<!-- Section one -->
+    
+<!-- Section 1  Why is HealthChecker free? -->
     <div class="anim-fade-in container-lg p-responsive overflow-hidden">
       <div class="overflow-hidden py-10">
         <div class="col-md-6 float-left pr-md-6 pr-lg-6 text-center">
@@ -31,17 +31,8 @@
           <h5>You can also use this application to protect your employees and customers from other epidemics such as monkeypox and ebola.</h5> 
         </div>
       </div></div>
-      <!-- Section one ends -->
-<!-- Section two -->
-      <!-- <div class="overflow-hidden py-7">
-        <div class="col-md-6 float-left pr-md-6 pr-lg-6 mb-6" >
-          <h2>Do you want to contribute too?</h2>
-          <h5 style="white-space: nowrap;">By sharing HealthChecker on social media platforms, you can get more people to see HealthChecker.</h5>
-            <h5 style="white-space: nowrap;">Please do not hesitate to contact us if you have any advice or suggestions.</h5>
-        </div>
-      </div>
-    </div> -->
-  
+
+<!-- Section 1  Why is HealthChecker free ENDS -->
     <div class="container-lg p-responsive overflow-hidden">
       <div class="main-content border-top"></div>
   <div > 
@@ -74,7 +65,7 @@
         </div></div></div></div >
       <br><br>
 
-      <!-- Section How works -->
+      <!-- Section 2 How works -->
       <div class="container-lg p-responsive overflow-hidden border-top">
         <br>
       <h2 >How does HealthChecker work?</h2>
@@ -111,14 +102,14 @@
   </div>
 </div></div>
 <br><br>    
-      <!-- Section How works ENDS -->
+      <!-- Section 2 How works ENDS -->
 
-<!-- Youtube section -->
+<!-- Section 3 Youtube  -->
 
       <div class="overflow-hidden py-10 border-top">
         <div class="col-md-6 float-left pr-md-6 pr-lg-6 mb-6"  style="padding-left: 3%" >
           <iframe  width="890" height="500" src="https://www.youtube.com/embed/bPITHEiFWLc" style="text-align:center"></iframe>
-          <!-- Youtube section  ends-->
+          <!-- Section 3 Youtube ENDS -->
         </div>
       </div>
     </div>
