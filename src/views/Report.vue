@@ -5,9 +5,7 @@
     <div v-if="hasReported">You already reported today!</div>
     <div v-else>
       <div style="border: 2px solid ;padding: 20px; border-radius: 25px; background: grey;">
-      <div v-if="step===1">1) Do you or the person you are inquiring about have any of the following symptoms: severe difficulty breathing.(e.g., struggling for each breath, speaking in single words), chest pain, confusion, extreme drowsiness or loss of consciousness?)
-      
-      </div>
+      <div v-if="step===1">1)	Do you or the person you are inquiring about have shortness of breath at rest or difficulty breathing when lying down? </div>
       <div  v-if="step===2">2) Do you or the person you are inquiring about have shortness of breath at rest or difficulty breathing when lying down?</div>
       
       <div v-if="step===3">3) Do you have a new onset or worsening of any of the following symptoms?</div>
