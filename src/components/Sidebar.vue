@@ -1,7 +1,7 @@
 <template>
   <div id="sidebar" class="position-fixed py-lg-4">
     <router-link :to="`/`" class="hide-sm hide-md hide-lg" >
-      <img  src="~/@/assets/onlylogo.png" style="max-width: 220px;" class="mb-2 anim-pulse" />
+      <img  src="~/@/assets/onlylogo2.png" style="max-width: 220px;" class="mb-2 anim-pulse" />
     </router-link>
     <ul class="list-style-none border-top border-lg-top-0 text-center text-lg-left">
       <li class="col-3 col-lg-12">
