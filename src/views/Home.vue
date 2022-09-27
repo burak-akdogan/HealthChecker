@@ -66,13 +66,13 @@
       <br><br>
 
       <!-- Section 2 How works -->
-      <div class="container-lg p-responsive overflow-hidden border-top">
+      <div class="container-lg p-responsive overflow-hidden border-top ">
         <br>
       <h2 >How does HealthChecker work?</h2>
       <!-- offset-1 -->
       <div class="d-flex offset-1 flex-column flex-md-row flex-items-center flex-md-items-center"> 
   <div class="col-3 d-flex flex-items-center flex-items-center flex-md-items-start">
-    <div style="background-color: green; height: 150px; width:150px;" />
+    <div style="background-color: green; height: 150px; width:150px;box-shadow: rgba(0, 0, 0, 0.24) 6px 4px 8px;" />
   </div>
   <div class="col-12 col-md-10 d-flex flex-column flex-justify-center flex-items-center flex-md-items-start pl-md-4">
     <h2>You are approved to go workplace.</h2>
@@ -83,9 +83,9 @@
 <!-- offset-2 -->
 <div class="d-flex offset-2 flex-column flex-md-row flex-items-center flex-md-items-center">
   <div class="col-3 d-flex flex-items-center flex-items-center flex-md-items-start">
-    <div style="background-color: yellow; height: 150px; width:150px;" />
+    <div style="background-color: yellow; height: 150px; width:150px;box-shadow: rgba(0, 0, 0, 0.24) 6px 3px 8px;" />
   </div>
-  <div class="col-12 col-md-10 d-flex flex-column flex-justify-center flex-items-center flex-md-items-start pl-md-4">
+  <div class="col-12 col-md-10 d-flex flex-column flex-justify-center flex-items-center flex-md-items-start pl-md-4" >
     <h2>Please consult your supvervisor!</h2>
     
   </div>
@@ -94,7 +94,7 @@
 <!-- offset-3 -->
 <div class="d-flex offset-3 flex-column flex-md-row flex-items-center flex-md-items-center" >
   <div class="col-3 d-flex flex-items-center flex-items-center flex-md-items-start " >
-    <div style="background-color: tomato; height: 150px; width:150px;" />
+    <div style="background-color: tomato; height: 150px; width:150px;box-shadow: rgba(0, 0, 0, 0.24) 6px 1px 8px;" />
      
   </div>
   <div class="col-12 col-md-10 d-flex flex-column flex-justify-center flex-items-center flex-md-items-start pl-md-4">
