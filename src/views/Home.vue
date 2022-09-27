@@ -75,7 +75,7 @@
     <div style="background-color: green; height: 150px; width:150px;" />
   </div>
   <div class="col-12 col-md-10 d-flex flex-column flex-justify-center flex-items-center flex-md-items-start pl-md-4">
-    <h2 class="text-normal lh-condensed">You are approved to go workplace.</h2>
+    <h2>You are approved to go workplace.</h2>
     
   </div>
 </div>
@@ -86,19 +86,19 @@
     <div style="background-color: yellow; height: 150px; width:150px;" />
   </div>
   <div class="col-12 col-md-10 d-flex flex-column flex-justify-center flex-items-center flex-md-items-start pl-md-4">
-    <h2 class="text-normal lh-condensed">Please consult your supvervisor!</h2>
+    <h2>Please consult your supvervisor!</h2>
     
   </div>
 </div>    
 <br>
 <!-- offset-3 -->
 <div class="d-flex offset-3 flex-column flex-md-row flex-items-center flex-md-items-center" >
-  <div class="col-3 d-flex flex-items-center flex-items-center flex-md-items-start" >
+  <div class="col-3 d-flex flex-items-center flex-items-center flex-md-items-start " >
     <div style="background-color: tomato; height: 150px; width:150px;" />
      
   </div>
   <div class="col-12 col-md-10 d-flex flex-column flex-justify-center flex-items-center flex-md-items-start pl-md-4">
-    <h2 class="text-normal lh-condensed">Stay at home and contact a supervisor</h2>
+    <h2>Stay at home and contact a supervisor</h2>
   </div>
 </div></div>
 <br><br>    
