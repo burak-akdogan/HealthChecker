@@ -6,18 +6,25 @@
     <div v-else>
       <div style="border: 2px solid ;padding: 20px; border-radius: 25px; background: grey;">
 
-      <div v-if="step===1">  1)	Do you or the person you are inquiring about have shortness of breath at rest or difficulty breathing when lying down? </div>
-      <div v-if="step===2"> 2) Do you or the person you are inquiring about have any of the following symptoms: severe difficulty breathing, chest pain, confusion, extreme drowsiness or loss of consciousness?</div>   
-      <div v-if="step===3">  3) Have you tested positive for COVID-19 in the previous 10 days by rapid test or laboratory-based test? </div>
-      <div v-if="step===4">  4) Have you travelled internationally in the last 14 days?</div>
-      <div v-if="step===5">  5) Are you currently awaiting results from a COVID-19 test?</div>
+      <div v-if="step===1">  1)	Have you travelled internationally in the last 14 days?</div> 
+      <!-- If yes --- Yellow  // Not --- (Green) -->
+      <div v-if="step===2">  2) Are you currently awaiting results from a COVID-19 test?</div>   
+      <!-- If yes --- Yellow  // Not --- (Green) -->
+      <div v-if="step===3">  3) Do you have shortness of breath at rest or difficulty breathing when lying down? </div>
+      <!-- If yes --- Yellow  // Not --- (Green) -->
+      <div v-if="step===4">  4) Have you tested positive for COVID-19 in the previous 10 days by rapid test or laboratory-based test?</div>
+      <!-- If yes --- Red  // Not --- (Green) -->
+      <div v-if="step===5">  5) Do you have any of the following symptoms: severe difficulty breathing, chest pain, confusion, extreme drowsiness or loss of consciousness? </div>
+      <!-- If yes --- Red  // Not --- (Green) -->
       <div v-if="step===6">  6) Have you recently received a positive result on an at-home rapid test?</div>
-      <div v-if="step===7">  7) Are you currently awaiting results from a COVID-19 test?</div>
+        <!-- If yes --- Red  // Not --- (Green) -->
+      
+      
 
       <br>
-      <div v-if="step!==8"><button  class="btn-outline-mktg" @click="setQuestion('Yes')">Yes</button> <button class="btn-outline-mktg" @click="setQuestion('No')">No</button></div>
+      <div v-if="step!==7"><button  class="btn-outline-mktg" @click="setQuestion('Yes')">Yes</button> <button class="btn-outline-mktg" @click="setQuestion('No')">No</button></div>
       <br>
-      <button :disabled="step!==8" class="btn-mktg mb-3" @click="submitReport()">Submit</button>
+      <button :disabled="step!==7" class="btn-mktg mb-3" @click="submitReport()">Submit</button>
     </div>
   </div></div></div>
 </template>

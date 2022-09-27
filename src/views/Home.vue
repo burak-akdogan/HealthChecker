@@ -8,12 +8,12 @@
       <div class="container-lg p-responsive pt-10">
         <div class="col-md-5">
           <div></div><img class="eyebrow-mb-2" src="~/@/assets/logov4.png"><div></div>
-          <h2 class="eyebrow-mb-3" style="color:aliceblue">Protect Your Employees And Customers.</h2>
+          <h2 class="eyebrow-mb-3" style="color:#11639d">Protect Your Employees And Customers.</h2>
           <br>
-          <h1 class="mb-4" style="color:aliceblue" v-text="'Welcome'"/> 
+          <h1 class="mb-4" style="color:  #303247" v-text="'Welcome'"/> 
           <router-link v-if="!isAuthenticated" to="/signup" class="btn-mktg mb-3 ">Signup</router-link>
           <router-link v-else to="/report" class="btn-mktg mb-3 ">Report </router-link>
-          <p style="color:aliceblue" v-if="!isAuthenticated">Or, <router-link to="/login" >Log in</router-link></p> 
+          <p style="color:#11639d" v-if="!isAuthenticated">Or, <router-link to="/login" >Log in</router-link></p> 
         </div>
       </div>
     </div>
@@ -131,7 +131,7 @@ export default {
 
 <style scoped lang="scss">
 .hero {
-  background-image: url('~@/assets/Back.jpg');
+  background-image: url('~@/assets/BBBACK v2.png');
   background-size: cover;
   background-position: center;
  // background: linear-gradient(#ee4365 70%, rgba(12, 7, 7, 0.925));

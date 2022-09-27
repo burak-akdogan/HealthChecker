@@ -1,5 +1,5 @@
 <template>
-  <div class="py-5 border-top " style="background: #171717 ;">
+  <div class="py-5 border-top " style="background: #303247 ;">
     <div class="container-lg p-responsive d-flex">
       <div class="flex-auto" style="color: white;">HealthChecker © 2022</div >
         <div class="flex-auto" style="color: white;">We Care About Humanity!</div>
