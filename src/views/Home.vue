@@ -6,8 +6,8 @@
     <!-- <div class="hero py-6" > -->
       <div class="hero py-2" >
       <div class="container-lg p-responsive pt-10">
-        <div class="col-md-5">
-          <div></div><img class="eyebrow-mb-2" src="~/@/assets/logov4.png"><div></div>
+        <div class="col-md-3">
+          <div></div><img class="eyebrow-mb-2" src="~/@/assets/logov10.png"><div></div>
           <h2 class="eyebrow-mb-3" style="color:#11639d">Protect Your Employees And Customers.</h2>
           <br>
           <h1 class="mb-4" style="color:  #303247" v-text="'Welcome'"/> 
