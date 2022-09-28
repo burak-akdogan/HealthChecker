@@ -17,16 +17,22 @@
       <div v-if="step===5">  5) Do you have any of the following symptoms: severe difficulty breathing, chest pain, confusion, extreme drowsiness or loss of consciousness? </div>
       <!-- If yes --- Red  // Not --- (Green) -->
       <div v-if="step===6">  6) Have you recently received a positive result on an at-home rapid test?</div>
-        <!-- If yes --- Red  // Not --- (Green) -->
-      
+      <!-- If yes --- Red  // Not --- (Green) -->
       
 
       <br>
       <div v-if="step!==7"><button  class="btn-outline-mktg" @click="setQuestion('Yes')">Yes</button> <button class="btn-outline-mktg" @click="setQuestion('No')">No</button></div>
       <br>
       <button :disabled="step!==7" class="btn-mktg mb-3" @click="submitReport()">Submit</button>
+      
     </div>
-  </div></div></div>
+    <div class="d-flex border-bottom py-4"></div>
+    <br>
+    <div class="d-flex border-bottom py-12"></div>
+    
+  </div>
+     </div>
+        </div>
 </template>
 
 <script>
@@ -49,7 +55,7 @@ export default {
       return false
       let today = new Date()
       let oldReport= new Date(this.$store.state.settings.report.created)
-      return (today.getFullYear()===oldReport.getFullYear() && today.getMonth()===oldReport.getMonth() && today.getDate()===oldReport.getDate())
+      return (today.getFullYear()===oldReport.getFullYear() && today.getMonth()===oldReport.getMonth() && today.getDate()===oldReport.getDate()) //allow only one time in a day.
     },
   },
   methods: {

@@ -5,8 +5,7 @@
       <a
         @click="logout"
         class="d-flex border-bottom v-align-middle px-4 py-3 text-red"
-        v-text="'Logout'"
-      />
+        v-text="'Logout'"/>
     </div>
   </div>
 </template>
