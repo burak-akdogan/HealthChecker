@@ -87,7 +87,6 @@
   </div>
   <div class="col-12 col-md-10 d-flex flex-column flex-justify-center flex-items-center flex-md-items-start pl-md-4" >
     <h2>Please consult your supvervisor!</h2>
-    
   </div>
 </div>    
 <br>
