@@ -1,16 +1,16 @@
 <template>
   <div >
     <Top :title="'Self Report'" />
-    <div class="Box-footer ">
-    <div v-if="hasReported">You already reported today!</div>
+    
+    <div class="Box-header d-flex border-bottom v-align-middle px-4 py-3 text-red" v-if="hasReported">You already reported today!</div>
     <div v-else>
-      <div style="border: 2px solid ;padding: 20px; border-radius: 25px; background: grey;">
+      <div class="Box-header">
 
       <div v-if="step===1">  1)	Have you travelled internationally in the last 14 days?</div> 
       <!-- If yes --- Yellow  // Not --- (Green) -->
       <div v-if="step===2">  2) Are you currently awaiting results from a COVID-19 test?</div>   
       <!-- If yes --- Yellow  // Not --- (Green) -->
-      <div v-if="step===3">  3) Do you have shortness of breath at rest or difficulty breathing when lying down? </div>
+      <div v-if="step===3">  3) Do you have shortness of breath at rest or difficulty breathing when lying down?</div>
       <!-- If yes --- Yellow  // Not --- (Green) -->
       <div v-if="step===4">  4) Have you tested positive for COVID-19 in the previous 10 days by rapid test or laboratory-based test?</div>
       <!-- If yes --- Red  // Not --- (Green) -->
@@ -26,13 +26,13 @@
       <button :disabled="step!==7" class="btn-mktg mb-3" @click="submitReport()">Submit</button>
       
     </div>
-    <div class="d-flex border-bottom py-4"></div>
+    <div class="d-flex border-bottom py-4"></div>  <!-- Report  logs section with paginations-->
     <br>
     <div class="d-flex border-bottom py-12"></div>
     
   </div>
      </div>
-        </div>
+        
 </template>
 
 <script>
