@@ -11,10 +11,7 @@
        
         
       </div>
-        <a v-for="(link, i) in links" :key="i" :href="link" class="text-black" target="_blank">
-          <Icon :name="i" class="ml-4" />
-          
-        </a>
+     
       </div>
     </div>
   
