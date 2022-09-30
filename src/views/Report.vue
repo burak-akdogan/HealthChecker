@@ -16,20 +16,17 @@
       <!-- If yes --- Red  // Not --- (Green) -->
       <div v-if="step===5">  5) Do you have any of the following symptoms: severe difficulty breathing, chest pain, confusion, extreme drowsiness or loss of consciousness? </div>
       <!-- If yes --- Red  // Not --- (Green) -->
-      <div v-if="step===6">  6) Have you recently received a positive result on an at-home rapid test?</div>
-      <!-- If yes --- Red  // Not --- (Green) -->
-      
      
       <br>
-      <div v-if="step!==7"><button  class="btn-outline-mktg" @click="setQuestion('Yes')">Yes</button> <button class="btn-outline-mktg" @click="setQuestion('No')">No</button></div>
+      <div v-if="step!==6"><button  class="btn-outline-mktg" @click="setQuestion('Yes')">Yes</button> <button class="btn-outline-mktg" @click="setQuestion('No')">No</button></div>
       <br>
-      <button :disabled="step!==7" class="btn-mktg mb-3" @click="submitReport()">Submit</button>
+      <button :disabled="step!==6" class="btn-mktg mb-3" @click="submitReport()">Submit</button>
       
     </div>
   </div> 
    <!-- Report  logs section with paginations-->
   <div class="d-flex border-bottom py-4"></div>
-
+  <div class="Box-header mx-auto text-center">Reports</div>
   <div class="d-flex border-bottom py-12"></div>
      </div>
         
