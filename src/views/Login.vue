@@ -1,7 +1,7 @@
 <template>
   <div class="container-sm p-responsive">
     <div class="text-center mb-4">
-      <img src="~/@/assets/logov4.png" style="max-width: 480px;" />
+      <img src="~/@/assets/logov10.png" style="max-width: 480px;" />
     </div>
     <h4 class="text-center eyebrow mb-4" v-text="'Login'" />
     <form @submit.prevent="handleSubmit" style="max-width: 360px;" class="mx-auto">
