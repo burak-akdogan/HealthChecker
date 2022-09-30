@@ -27,7 +27,7 @@ if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' &
 }
 
 
-const data = ` <p style="color:${color};">${answer} ${} `
+const data = ` <p style="color:${color};">${answer}`
 
 await sendEmail(emailTo,data)
   return sendResponse(ws, tag, { success: true });
