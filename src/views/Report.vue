@@ -19,18 +19,18 @@
       <div v-if="step===6">  6) Have you recently received a positive result on an at-home rapid test?</div>
       <!-- If yes --- Red  // Not --- (Green) -->
       
-
+     
       <br>
       <div v-if="step!==7"><button  class="btn-outline-mktg" @click="setQuestion('Yes')">Yes</button> <button class="btn-outline-mktg" @click="setQuestion('No')">No</button></div>
       <br>
       <button :disabled="step!==7" class="btn-mktg mb-3" @click="submitReport()">Submit</button>
       
     </div>
-    <div class="d-flex border-bottom py-4"></div>  <!-- Report  logs section with paginations-->
-    <br>
-    <div class="d-flex border-bottom py-12"></div>
-    
-  </div>
+  </div> 
+   <!-- Report  logs section with paginations-->
+  <div class="d-flex border-bottom py-4"></div>
+
+  <div class="d-flex border-bottom py-12"></div>
      </div>
         
 </template>
@@ -76,6 +76,7 @@ console.log(this.form)
 
       }
     }
+ 
   }
   
 };
