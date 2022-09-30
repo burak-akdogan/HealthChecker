@@ -1,9 +1,11 @@
 <template>
   <div >
-    <Top :title="'Users'"/>
+    <Top :title="'Reports'"/>
  
-  <div class="Box-header mx-auto text-center">Users</div>
-  {{reports}}
+  <div class="Box-header mx-auto text-center">Reports</div>
+  
+  <!-- {{reports}} {{user.email}} {{user.id}} -->
+  {{reports}} 
   <div class="d-flex border-bottom py-12"></div>
      </div>
         
@@ -16,11 +18,17 @@ export default {
     return {
       user: this.$route.params.userid,
       account: this.$store.state.settings.account,
-      reports: []
+      reports: [],
+    
+      
+      
+      
     };
   },
  async mounted(){
     this.reports = await client.request('get_user_reports',this.user)
+    
+   
   },
   
   

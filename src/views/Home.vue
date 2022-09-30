@@ -12,7 +12,7 @@
           <br>
           <h1 class="mb-4" style="color:#303247" v-text="'Welcome'"/> 
           <router-link v-if="!isAuthenticated" to="/signup" class="btn-mktg mb-3 ">Signup</router-link>
-          <router-link v-else to="/report" class="btn-mktg mb-3 ">Report </router-link>
+          <router-link v-else :to="`/profile`" class="btn-mktg mb-3 ">Report</router-link>
           <p style="color:#11639d" v-if="!isAuthenticated">Or, <router-link to="/login" >Log in</router-link></p> 
         </div>
       </div>

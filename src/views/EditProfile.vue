@@ -7,7 +7,7 @@
       @cover="setCover"
       @avatar="setAvatar"
       class="border-bottom"
-    />
+    /> 
     <form @submit.prevent="handleSubmit" class="p-4">
       <dl class="form-group">
         <dt><label for="name">Name</label></dt>
@@ -18,9 +18,11 @@
           v-model="form.name"
         />
       </dl>
-      <!-- {{account}}  -->
+      
+      
       <dl class="form-group">
         <dt><label for="about">Bio</label></dt>
+        
         <textarea id="about" class="form-control input-lg input-block" v-model="form.about" />
       </dl>
       <dl class="flash flash-error" v-if="error" v-text="error" />

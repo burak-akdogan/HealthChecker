@@ -19,6 +19,7 @@ console.log(email[0].email)
 const emailTo = email[0].email
 let color = "red"
 let answer= 'selamyo'
+let username ='user'
 
 if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='Yes')
 {
@@ -49,7 +50,7 @@ if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='No' && 
 
 
 
-const data = ` <p style="color:${color};">${answer} `
+const data = ` <p style="color:${color};">${answer} ${username} `
 
 await sendEmail(emailTo,data)
   return sendResponse(ws, tag, { success: true });
