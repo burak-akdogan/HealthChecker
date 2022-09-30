@@ -30,10 +30,26 @@ if (params.form[1]==='No' && params.form[2]==='No' && params.form[3]==='No' && p
   color='Green'
   answer='You are approved to go workplace.' //hr
 }
+if (params.form[1]==='No' && params.form[2]==='Yes' && params.form[3]==='No' && params.form[4]==='Yes' && params.form[5]==='No')
+{
+  color='Yellow'
+  answer='Please consult your supvervisor!' //hr
+}
+if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' && params.form[4]==='No' && params.form[5]==='No')
+{
+  color='Yellow'
+  answer='Please consult your supvervisor!' //hr
+}
+if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='No' && params.form[4]==='No' && params.form[5]==='No')
+{
+  color='Green'
+  answer='You are approved to go workplace.' //hr
+}
 
 
 
-const data = ` <p style="color:${color};">${answer}`
+
+const data = ` <p style="color:${color};">${answer} `
 
 await sendEmail(emailTo,data)
   return sendResponse(ws, tag, { success: true });
