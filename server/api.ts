@@ -25,6 +25,12 @@ if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' &
   color='red'
   answer='Stay at home and contact a supervisor' //hr
 }
+if (params.form[1]==='No' && params.form[2]==='No' && params.form[3]==='No' && params.form[4]==='No' && params.form[5]==='No')
+{
+  color='Green'
+  answer='You are approved to go workplace.' //hr
+}
+
 
 
 const data = ` <p style="color:${color};">${answer}`
