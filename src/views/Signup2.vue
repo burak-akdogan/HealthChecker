@@ -33,11 +33,11 @@
         <input
           class="form-control input-lg input-block"
           type="text"
-          placeholder="CompanyID"
+          placeholder="Company"
           v-model="form.company"
         />
       </dl>
-      <dl class="form-group text-center">Company ID given by your Company</dl>
+
       <dl class="flash flash-error" v-if="error" v-text="error" />
       <div class="form-actions">
         <button
@@ -47,7 +47,7 @@
           v-text="'Sign Up'"
         />
       </div>
-      <dl class="form-group text-center"><router-link to="/signup2">Register My Company </router-link>Or <router-link to="/login"> Log in</router-link></dl>
+      <dl class="form-group text-center"><router-link to="/signup">Register as Employee </router-link>Or <router-link to="/login"> Log in</router-link></dl>
     </form>
   </div>
 </template>
@@ -70,15 +70,8 @@ export default {
       try {
         this.isLoading = true;
         const values = await signup.validateAsync(this.form);
-        const companyExist = await client.request('check_company', values);
-       if (Object.keys(companyExist).length === 0) {
-        this.error = 'this company doesnt exist'
-        this.isLoading = false
-       } else {
         this.error = '';
         this.submit(values);
-       }
-        
       } catch (error) {
         this.error = error.details[0].message;
         this.isLoading = false;
@@ -86,14 +79,15 @@ export default {
     },
     async submit(values) {
       try {
-        const result = await client.request('signup', values);
+        const result = await client.request('signup2', values);
         localStorage.setItem(TOKEN_LOCALSTORAGE_KEY, result.access_token);
         this.$store.dispatch('init').then(() => this.$router.push('/report'));
       } catch (error) {
         this.error = error;
         this.isLoading = false;
       }
-    }
+    },
+
   }
 };
 

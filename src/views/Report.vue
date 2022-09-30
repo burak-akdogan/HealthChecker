@@ -16,18 +16,25 @@
       <!-- If yes --- Red  // Not --- (Green) -->
       <div v-if="step===5">  5) Do you have any of the following symptoms: severe difficulty breathing, chest pain, confusion, extreme drowsiness or loss of consciousness? </div>
       <!-- If yes --- Red  // Not --- (Green) -->
+     <div      v-if="form[1]==='Yes' && form[2]==='Yes' && form[3]==='Yes' && form[4]==='Yes' && form[5]==='Yes' "> RED</div>
+
+     <div v-else-if="form[1]==='Yes' && form[2]==='Yes' && form[3]==='Yes' && form[4]==='No' && form[5]==='No' "> YELLOW</div>
+     <div v-else-if="form[1]==='Yes' && form[2]==='No' && form[3]==='Yes' && form[4]==='No' && form[5]==='No' "> YELLOW</div>
+     <div v-else-if="form[1]==='Yes' && form[2]==='No' && form[3]==='No' && form[4]==='No' && form[5]==='No' "> YELLOW</div>
      
+     <div v-else-if="form[1]==='No' && form[2]==='No' && form[3]==='No' && form[4]==='No' && form[5]==='No' "> GREEN</div>
+     
+     <div v-else-if="step>5"> Contant your HR</div>
+
       <br>
       <div v-if="step!==6"><button  class="btn-outline-mktg" @click="setQuestion('Yes')">Yes</button> <button class="btn-outline-mktg" @click="setQuestion('No')">No</button></div>
       <br>
-      <button :disabled="step!==6" class="btn-mktg mb-3" @click="submitReport()">Submit</button>
+      <button v-if="!submitted" :disabled="step!==6" class="btn-mktg mb-3" @click="submitReport()">Submit</button>
       
     </div>
   </div> 
    <!-- Report  logs section with paginations-->
-  <div class="d-flex border-bottom py-4"></div>
-  <div class="Box-header mx-auto text-center">Reports</div>
-  <div class="d-flex border-bottom py-12"></div>
+  
      </div>
         
 </template>
@@ -40,7 +47,9 @@ export default {
       form:{},
       step:1,
       isVerified: !!this.$store.state.settings.account.meta.is_verified,
-      lastReport: this.$store.state.settings.report
+      lastReport: this.$store.state.settings.report,
+      account: this.$store.state.settings.account,
+      submitted: false
     };
   },
   mounted(){
@@ -64,8 +73,9 @@ console.log(this.form)
     async submitReport() {
       try {
         this.isLoading = true;
-        const result = await client.request('submit_report', this.form);
-        this.$store.dispatch('init');
+        const result = await client.request('submit_report',{form:this.form,company_id:this.account.company_id});
+        // this.$store.dispatch('init');
+        this.submitted = true
       } catch (error) {
         this.error = error;
         console.log(error)

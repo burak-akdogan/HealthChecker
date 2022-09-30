@@ -10,10 +10,16 @@
           <span class="hide-sm hide-md hide-lg ml-3" v-text="'Home'" />
         </router-link>
       </li>
-      <li class="col-3 col-lg-12" >
+      <li v-if="account.role==='employee'" class="col-3 col-lg-12" >
         <router-link to="/report" class="p-3 d-block">
           <Icon name="pen" />
           <span class="hide-sm hide-md hide-lg ml-3">Report</span>
+        </router-link>
+      </li>
+      <li v-if="account.role==='hr'" class="col-3 col-lg-12" >
+        <router-link to="/viewreports" class="p-3 d-block">
+          <Icon name="pen" />
+          <span class="hide-sm hide-md hide-lg ml-3">View Reports</span>
         </router-link>
       </li>
       <li class="col-3 col-lg-12" >

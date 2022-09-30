@@ -2,16 +2,34 @@ import router from './helpers/router';
 import { sendResponse, sendErrorResponse } from './helpers/ws';
 import db from './helpers/db';
 import { uid, MODEL_ID } from './helpers/utils';
+import {sendEmail} from './mail';
+
+
 
 router.add('submit_report', async (params, tag, ws) => {
   console.log(params)
   if (!ws.id) return;
   const post = {
     user_id: ws.id,
-    meta: JSON.stringify(params)
+    meta: JSON.stringify(params.form)
   };
-  let query = 'INSERT INTO reports SET ?;';
-  await db.queryAsync(query, [post]);
+await db.queryAsync('INSERT INTO reports SET ?;', [post]);
+  const email= await db.queryAsync("SELECT email FROM users WHERE company_id =  ? AND role='hr';", [params.company_id]);
+console.log(email[0].email)
+const emailTo = email[0].email
+let color = "red"
+let answer= 'selamyo'
+
+if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='Yes')
+{
+  color='red'
+  answer='Stay at home and contact a supervisor' //hr
+}
+
+
+const data = ` <p style="color:${color};">${answer} ${} `
+
+await sendEmail(emailTo,data)
   return sendResponse(ws, tag, { success: true });
 });
 
@@ -19,6 +37,21 @@ router.add('get_report', async (params, tag, ws) => {
   if (!ws.id) return;
   let query = 'SELECT * FROM reports WHERE user_id = ? ORDER BY created DESC LIMIT 1;';
   const result = await db.queryAsync(query, [ws.id]);
+  return sendResponse(ws, tag, result);
+});
+
+router.add('get_user_reports', async (params, tag, ws) => {
+  if (!ws.id) return;
+  let query = 'SELECT * FROM reports WHERE user_id = ? ORDER BY created DESC;';
+  const result = await db.queryAsync(query, [params]);
+  return sendResponse(ws, tag, result);
+});
+
+router.add('get_users', async (params, tag, ws) => {
+  if (!ws.id) return;
+  let query = 'SELECT * FROM users WHERE company_id = ?';
+
+  const result = await db.queryAsync(query, [params]);
   return sendResponse(ws, tag, result);
 });
 
@@ -44,9 +77,15 @@ router.add('get_subscribers', async (params, tag, ws) => {
 
 router.add('get_profile', async (params, tag, ws) => {
   const query = 'SELECT id, username, meta FROM users WHERE username = ?';
+  console.log(params)
   const result = await db.queryAsync(query, [params]);
   const user = result[0];
-  user.meta = JSON.parse(user.meta);
+  try {
+    user.meta = JSON.parse(user.meta);
+  } catch (error) {
+    
+  }
+  
   return sendResponse(ws, tag, user);
 });
 

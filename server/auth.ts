@@ -6,6 +6,15 @@ import { issueToken } from './helpers/token';
 import { uid } from './helpers/utils';
 import { signup, login } from '../common/schemas';
 
+function getHash(input){
+  var hash = 0, len = input.length;
+  for (var i = 0; i < len; i++) {
+    hash  = ((hash << 5) - hash) + input.charCodeAt(i);
+    hash |= 0; // to 32bit integer
+  }
+  return hash;
+}
+
 router.add('signup', async (params, tag, ws) => {
   try {
     const values = await signup.validateAsync(params);
@@ -15,10 +24,37 @@ router.add('signup', async (params, tag, ws) => {
       username: id,
       email: values.email,
       password: values.password,
-      company: values.company,
+      company_id: values.company,
+      role: 'employee',
       meta: JSON.stringify({name: values.name})
     };
     await db.queryAsync('INSERT INTO users SET ?', [user]);
+    const token = issueToken(user.id);
+    return sendResponse(ws, tag, { access_token: token });
+  } catch (error) {
+    return sendErrorResponse(ws, tag, error.sqlMessage || 'request failed');
+  }
+});
+
+router.add('signup2', async (params, tag, ws) => {
+  try {
+    const values = await signup.validateAsync(params);
+    const id = uid();
+    const user = {
+      id,
+      username: id,
+      email: values.email,
+      password: values.password,
+      company_id: getHash(values.company),
+      role: 'hr',
+      meta: JSON.stringify({name: values.name})
+    };
+    const company = {
+      name: values.company,
+      company_id: getHash(values.company),
+    };
+    await db.queryAsync('INSERT INTO users SET ?', [user]);
+    await db.queryAsync('INSERT INTO companies SET ?', [company]);
     const token = issueToken(user.id);
     return sendResponse(ws, tag, { access_token: token });
   } catch (error) {
@@ -60,10 +96,20 @@ router.add('verify', async (params, tag, ws) => {
     return sendErrorResponse(ws, tag, e);
   }
   if (!ws.id) return;
-  let query = 'SELECT id, username, email, meta FROM users WHERE id = ? LIMIT 1;';
+  let query = 'SELECT id, username, email, meta, role, company_id FROM users WHERE id = ? LIMIT 1;';
   try {
     const result = await db.queryAsync(query, [ws.id]);
     return sendResponse(ws, tag, { account: result[0]  });
+  } catch (e) {
+    return sendErrorResponse(ws, tag, e);
+  }
+});
+
+router.add('check_company', async (params, tag, ws) => {  
+  let query = 'SELECT *  FROM companies WHERE company_id = ? LIMIT 1;';
+  try {
+    const result = await db.queryAsync(query, [params.company]);
+    return sendResponse(ws, tag, { company: result[0]  });
   } catch (e) {
     return sendErrorResponse(ws, tag, e);
   }

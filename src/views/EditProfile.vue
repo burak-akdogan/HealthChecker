@@ -18,6 +18,7 @@
           v-model="form.name"
         />
       </dl>
+      <!-- {{account}}  -->
       <dl class="form-group">
         <dt><label for="about">Bio</label></dt>
         <textarea id="about" class="form-control input-lg input-block" v-model="form.about" />

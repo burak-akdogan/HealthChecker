@@ -5,22 +5,7 @@
       <div
         class="cover text-center width-full bg-gray-dark position-relative"
         style="height: 240px;"
-        :style="cover && `background-image: url('https://gateway.pinata.cloud/ipfs/${cover}')`"
-      >
-        <Upload
-          v-if="editable"
-          v-model="coverUpload"
-          @isLoading="setUploadCoverLoading"
-          class="position-absolute left-0 width-full height-full bg-shadow"
-          :class="!coverUploadIsLoading && 'show-on-hover'"
-        >
-          <div class="pt-10">
-            <span class="btn-outline-mktg">
-              <Icon name="image" class="mr-2" />
-              Upload cover image
-            </span>
-          </div>
-        </Upload>
+        :style="`background-image: url('https://image.shutterstock.com/image-photo/colorful-smoke-on-dark-background-600w-1681744762.jpg')`" >
       </div>
       <router-link
         v-if="username === account.username && !editable"
@@ -36,19 +21,7 @@
       >
         <div>
           <div class="mx-auto mx-sm-0 position-relative mb-4">
-            <Upload
-              v-if="editable"
-              v-model="avatarUpload"
-              @isLoading="setUploadAvatarLoading"
-              class="circle position-absolute text-center text-white bg-shadow"
-              :class="!avatarUploadIsLoading && 'show-on-hover'"
-              style="height: 128px; width: 128px;"
-            >
-              <div class="pt-7">
-                <Icon name="image" class="text-white mt-7" style="font-size: 32px;" />
-              </div>
-            </Upload>
-            <Avatar :ipfsHash="avatar" :size="128" />
+            <Avatar :ipfsHash="`https://image.shutterstock.com/image-photo/colorful-smoke-on-dark-background-600w-1681744762.jpg`" :size="128" />
           </div>
         </div>
         <div class="mt-sm-8 ml-sm-3">
