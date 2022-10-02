@@ -2,8 +2,6 @@
   <div >
     <Top :title="'Users'" />
     
-  
-   
   <div class="d-flex border-bottom py-4"></div>
   <div class="Box-header mx-auto text-center">Users</div>
   <div v-for="user in users" :key="user.id" >

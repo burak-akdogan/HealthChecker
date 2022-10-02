@@ -3,12 +3,14 @@
     <Top :title="'Reports'"/>
  
   <div class="Box-header mx-auto text-center">Reports</div>
-  
+  <div  v-for="report in reports" :key="report.report_id" >
   <!-- {{reports}} {{user.email}} {{user.id}} -->
-  {{reports}} 
+  {{report.meta}}
+  {{report.created}}
+  </div>
   <div class="d-flex border-bottom py-12"></div>
      </div>
-        
+   
 </template>
 
 <script>
@@ -19,8 +21,6 @@ export default {
       user: this.$route.params.userid,
       account: this.$store.state.settings.account,
       reports: [],
-    
-      
       
       
     };
