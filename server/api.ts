@@ -181,7 +181,7 @@ const data= `<!DOCTYPE html>
 <table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation"  width="100%">
 <tr>
 <td class="pad" style="width:100%;padding-right:0px;padding-left:0px;padding-top:70px;">
-<div align="center" class="alignment" style="line-height:10px"><img alt="Check Icon" src="/assets/check-icon.png" style="display: block; height: auto; border: 0; width: 93px; max-width: 100%;" title="Check Icon" width="93"/></div>
+<div align="center" class="alignment" style="line-height:10px"><img alt="Check Icon" src="https://raw.githubusercontent.com/burak-akdogan/HealthChecker/main/src/assets/check-icon.png" style="display: block; height: auto; border: 0; width: 93px; max-width: 100%;" title="Check Icon" width="93"/></div>
 </td>
 </tr>
 </table>
