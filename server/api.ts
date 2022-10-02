@@ -19,7 +19,7 @@ console.log(email[0].email)
 const emailTo = email[0].email
 let color = "red"
 let answer= 'selamyo'
-let username ='user'
+let username =''
 
 if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='Yes')
 {
