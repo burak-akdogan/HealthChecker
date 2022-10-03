@@ -16,25 +16,26 @@
       <!-- If yes --- Red  // Not --- (Green) -->
       <div v-if="step===5">  5) Do you have any of the following symptoms: severe difficulty breathing, chest pain, confusion, extreme drowsiness or loss of consciousness? </div>
       <!-- If yes --- Red  // Not --- (Green) -->
-     <div  style="color:red"    v-if="form[1]==='Yes' && form[2]==='Yes' && form[3]==='Yes' && form[4]==='Yes' && form[5]==='Yes' "> Stay at home and contact a supervisor.</div>
+      
+     <div  style="color:red"    v-if="form[1]==='Yes' && form[2]==='Yes' && form[3]==='Yes' && form[4]==='Yes' && form[5]==='Yes' "> Dear {{account.meta.name}}, Please Stay at home and contact a supervisor.</div>
 
-     <div style="color:yellow" v-else-if="form[1]==='Yes' && form[2]==='Yes' && form[3]==='Yes' && form[4]==='No' && form[5]==='No' "> Please consult your supvervisor!</div>
-     <div style="color:yellow" v-else-if="form[1]==='Yes' && form[2]==='No' && form[3]==='Yes' && form[4]==='No' && form[5]==='No' "> Please consult your supvervisor!</div>
-     <div style="color:yellow" v-else-if="form[1]==='Yes' && form[2]==='No' && form[3]==='No' && form[4]==='No' && form[5]==='No' "> You are approved to go workplace.</div>
+     <div style="color:yellow" v-else-if="form[1]==='Yes' && form[2]==='Yes' && form[3]==='Yes' && form[4]==='No' && form[5]==='No' "> Dear {{account.meta.name}}, Please consult your supvervisor!</div>
+     <div style="color:yellow" v-else-if="form[1]==='Yes' && form[2]==='No' && form[3]==='Yes' && form[4]==='No' && form[5]==='No' ">Dear {{account.meta.name}}, Please consult your supvervisor!</div>
+     <div style="color:yellow" v-else-if="form[1]==='Yes' && form[2]==='No' && form[3]==='No' && form[4]==='No' && form[5]==='No' "> Dear {{account.meta.name}}, You are approved to go workplace.</div>
      
-     <div style="color:green" v-else-if="form[1]==='No' && form[2]==='No' && form[3]==='No' && form[4]==='No' && form[5]==='No' "> You are approved to go workplace.</div>
+     <div style="color:green" v-else-if="form[1]==='No' && form[2]==='No' && form[3]==='No' && form[4]==='No' && form[5]==='No' ">Dear {{account.meta.name}},  You are approved to go workplace.</div>
     
-     <div style="color:green" v-else-if="form[1]==='Yes' && form[2]==='No' && form[3]==='Yes' && form[4]==='Yes' && form[5]==='No' "> Stay at home and contact a supervisor.</div>
+     <div style="color:green" v-else-if="form[1]==='Yes' && form[2]==='No' && form[3]==='Yes' && form[4]==='Yes' && form[5]==='No' ">Dear {{account.meta.name}}, Please Stay at home and contact a supervisor.</div>
      <div style="color:blue" v-else-if="step>5"> Contant your HR</div>
-
+   
       <br>
       <div v-if="step!==6"><button  class="btn-outline-mktg" @click="setQuestion('Yes')">Yes</button> <button class="btn-outline-mktg" @click="setQuestion('No')">No</button></div>
       <br>
       <button v-if="!submitted" :disabled="step!==6" class="btn-mktg mb-3" @click="submitReport()">Submit</button>
-      
+   
     </div>
   </div> 
-   <!-- Report  logs section with paginations-->
+   
   
      </div>
         

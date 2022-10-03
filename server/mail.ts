@@ -11,7 +11,8 @@ export const sendEmail = async (to,report) => {
       {
         From: {
           Email: 'bakdogan@na.edu',
-        },
+        },	
+        
         To: [
           {
             Email: to,

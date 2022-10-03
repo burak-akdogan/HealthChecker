@@ -1,7 +1,7 @@
 import router from './helpers/router';
 import { sendResponse, sendErrorResponse } from './helpers/ws';
 import db from './helpers/db';
-import { uid, MODEL_ID, usernameToId } from './helpers/utils';
+import { uid, MODEL_ID } from './helpers/utils';
 import {sendEmail} from './mail';
 import { userInfo } from 'os';
 
