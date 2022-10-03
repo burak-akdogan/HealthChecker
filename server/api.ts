@@ -1,8 +1,9 @@
 import router from './helpers/router';
 import { sendResponse, sendErrorResponse } from './helpers/ws';
 import db from './helpers/db';
-import { uid, MODEL_ID } from './helpers/utils';
+import { uid, MODEL_ID, usernameToId } from './helpers/utils';
 import {sendEmail} from './mail';
+import { userInfo } from 'os';
 
 
 
@@ -19,6 +20,10 @@ console.log(email[0].email)
 const emailTo = email[0].email
 let color = "red"
 let answer= 'selamyo'
+
+// const user = await db.queryAsync("SELECT meta FROM users WHERE user_id =  ? AND role='employee';", [ws.id]);
+// let username = JSON.parse(user[0].meta)
+// username = username.meta.name
 
 
 if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='Yes')
@@ -46,8 +51,6 @@ if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='No' && 
   color='Green'
   answer='You are approved to go workplace.' //hr
 }
-
-
 
 
 // const data = ` <p style="color:${color};">${answer} ${username} `
