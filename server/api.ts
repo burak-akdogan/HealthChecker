@@ -19,7 +19,7 @@ console.log(email[0].email)
 const emailTo = email[0].email
 let color = "red"
 let answer= 'selamyo'
-let username =''
+
 
 if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='Yes')
 {
@@ -205,7 +205,7 @@ const data= `<!DOCTYPE html>
 <p style="margin: 0; font-size: 14px; text-align: center; "> </p>
 <p style="margin: 0; font-size: 14px; text-align: center; "><span style="font-size:16px;">TEST</span></p>
 <p style="margin: 0; font-size: 14px; text-align: center; "> </p>
-<p style="margin: 0; font-size: 14px; text-align: center; "><p style="color:${color};">${answer} ${username}</p>
+<p style="margin: 0; font-size: 14px; text-align: center; "><p style="color:${color};">${answer} </p>
 <p style="margin: 0; font-size: 14px; text-align: center; "><span style="color:#000000;font-size:14px;">consectetur adipiscing elit lectus.</span></p>
 </div>
 </div>
