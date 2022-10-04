@@ -4,7 +4,7 @@
  
   <div class="Box-header mx-auto text-center">Reports</div>
   <div  v-for="report in reports" :key="report.report_id" >
-  <!-- {{reports}} {{user.email}} {{user.id}} -->
+
   {{report.meta}}
   {{report.created}}
   </div>

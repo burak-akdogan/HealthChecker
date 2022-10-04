@@ -29,29 +29,38 @@ let answer= 'selamyo'
 if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='Yes')
 {
   color='red'
-  answer='Stay at home and contact a supervisor' //hr
+  answer='Should stay at home and contact you!' //hr
 }
 if (params.form[1]==='No' && params.form[2]==='No' && params.form[3]==='No' && params.form[4]==='No' && params.form[5]==='No')
 {
   color='Green'
-  answer='You are approved to go workplace.' //hr
+  answer='Approved to go workplace.' //hr
 }
 if (params.form[1]==='No' && params.form[2]==='Yes' && params.form[3]==='No' && params.form[4]==='Yes' && params.form[5]==='No')
 {
   color='Yellow'
-  answer='Please consult your supvervisor!' //hr
+  answer='Need to consult You!' //hr
 }
 if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' && params.form[4]==='No' && params.form[5]==='No')
 {
   color='Yellow'
-  answer='Please consult your supvervisor!' //hr
+  answer='Need to consult You!' //hr
 }
 if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='No' && params.form[4]==='No' && params.form[5]==='No')
 {
   color='Green'
-  answer='You are approved to go workplace.' //hr
+  answer='Approved to go workplace.' //hr
 }
-
+if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='Yes' && params.form[4]==='No' && params.form[5]==='No')
+{
+  color='Yellow'
+  answer='Need to consult You!' //hr
+}
+if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='No')
+{
+  color='red'
+  answer='Should stay at home and contact you!' //hr
+}
 
 // const data = ` <p style="color:${color};">${answer} ${username} `
 const data= `<!DOCTYPE html>
@@ -61,14 +70,12 @@ const data= `<!DOCTYPE html>
 <title></title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]-->
-<!--[if !mso]><!-->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"/>
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
 <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet" type="text/css"/>
 <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet" type="text/css"/>
-<!--<![endif]-->
+
 <style>
 		* {
 			box-sizing: border-box;
@@ -142,9 +149,11 @@ const data= `<!DOCTYPE html>
 				display: table !important;
 				max-height: none !important;
 			}
+			
 		}
 	</style>
 </head>
+
 <body style="background-color: #f9f9f9; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
 <table border="0" cellpadding="0" cellspacing="0" class="nl-container" role="presentation" style="background-color: #f9f9f9;" width="100%">
 <tbody>
@@ -161,7 +170,7 @@ const data= `<!DOCTYPE html>
 <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation"  width="100%">
 <tr>
 <td class="pad" style="padding-bottom:10px;padding-top:10px;width:100%;padding-right:0px;padding-left:0px;">
-<div align="center" class="alignment" style="line-height:10px"><img alt="Yourlogo Light" src="https://raw.githubusercontent.com/burak-akdogan/HealthChecker/main/src/assets/logov10.png" style="display: block; height: auto; border: 0; width: 268px; max-width: 100%;" title="Yourlogo Light" width="268"/></div>
+<div align="center" class="alignment" style="line-height:10px"><img src="https://raw.githubusercontent.com/burak-akdogan/HealthChecker/main/src/assets/logov10.png" style="display: block; height: auto; border: 0; width: 268px; max-width: 100%;" title="Yourlogo Light" width="268"/></div>
 </td>
 </tr>
 </table>
@@ -186,6 +195,7 @@ const data= `<!DOCTYPE html>
 <td class="pad" style="width:100%;padding-right:0px;padding-left:0px;padding-top:70px;">
 <div align="center" class="alignment" style="line-height:10px"><img alt="Check Icon" src="https://raw.githubusercontent.com/burak-akdogan/HealthChecker/main/src/assets/check-icon.png" style="display: block; height: auto; border: 0; width: 93px; max-width: 100%;" title="Check Icon" width="93"/></div>
 </td>
+
 </tr>
 </table>
 <table border="0" cellpadding="0" cellspacing="0" class="text_block block-3" role="presentation" style=" word-break: break-word;" width="100%">
@@ -203,16 +213,11 @@ const data= `<!DOCTYPE html>
 <tr>
 <td class="pad" style="padding-bottom:80px;padding-left:30px;padding-right:30px;padding-top:10px;">
 <div style="font-family: sans-serif">
-<div class="" style="font-size: 14px; font-family: Arial, Helvetica Neue, Helvetica, sans-serif;  color: rgb(48, 50, 71); line-height: 1.5;">
-<p style="margin: 0; font-size: 14px; text-align: center; "><span style="font-size:16px;">Hi <strong><u>Jessy Doe</u></strong>,</span></p>
-<p style="margin: 0; font-size: 14px; text-align: center; "> </p>
-<p style="margin: 0; font-size: 14px; text-align: center; "><span style="font-size:16px;">TEST</span></p>
-<p style="margin: 0; font-size: 14px; text-align: center; "> </p>
-<p style="margin: 0; font-size: 14px; text-align: center; "><p style="color:${color};">${answer} </p>
-<p style="margin: 0; font-size: 14px; text-align: center; "><span style="color:#000000;font-size:14px;">consectetur adipiscing elit lectus.</span></p>
 </div>
 </div>
 </td>
+<div align="center" style="display: block;text-align: center; max-width: 680px;margin-left: 412px; padding: 25px ;background-color: ${color}; color: black;">
+<strong>USERNAME!</strong> ${answer}
 </tr>
 </table>
 </td>
@@ -223,11 +228,9 @@ const data= `<!DOCTYPE html>
 </tr>
 </tbody>
 </table>
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-3" role="presentation"  width="100%">
 <tbody>
 <tr>
 <td>
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="  background-color: #ffffff; color: #000000; width: 680px;" width="680">
 <tbody>
 <tr>
 <td class="column column-1" style="  font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
@@ -235,7 +238,6 @@ const data= `<!DOCTYPE html>
 <tr>
 <div style="font-family: sans-serif">
 <div class="" style="font-size: 14px; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; color: rgb(48, 50, 71); line-height: 1.2;">
-
 </div>
 </div>
 </td>
@@ -300,7 +302,6 @@ const data= `<!DOCTYPE html>
 <td class="pad">
 <div class="alignment" style="text-align:center;">
 <table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style="  display: inline-block;" width="108px">
-
 </table>
 </div>
 </td>
