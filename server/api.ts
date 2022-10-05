@@ -12,7 +12,8 @@ router.add('submit_report', async (params, tag, ws) => {
   if (!ws.id) return;
   const post = {
     user_id: ws.id,
-    meta: JSON.stringify(params.form)
+    meta: JSON.stringify(params.form),
+    color:params.color
   };
 await db.queryAsync('INSERT INTO reports SET ?;', [post]);
   const email= await db.queryAsync("SELECT email FROM users WHERE company_id =  ? AND role='hr';", [params.company_id]);
@@ -21,9 +22,13 @@ const emailTo = email[0].email
 let color = "red"
 let answer= 'selamyo'
 
-// const user = await db.queryAsync("SELECT meta FROM users WHERE user_id =  ? AND role='employee';", [ws.id]);
-// let username = JSON.parse(user[0].meta)
-// username = username.meta.name
+
+const user = await db.queryAsync("SELECT meta FROM users WHERE id =  ? AND role='employee';", [ws.id]);
+console.log(user,user[0].meta)
+let username = JSON.parse(user[0].meta)
+console.log(username)
+username = username.name
+console.log(username,user)
 
 
 if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='Yes')
@@ -48,8 +53,8 @@ if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' &
 }
 if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='No' && params.form[4]==='No' && params.form[5]==='No')
 {
-  color='Green'
-  answer='Approved to go workplace.' //hr
+  color='Yellow'
+  answer='Need to consult You!' //hr
 }
 if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='Yes' && params.form[4]==='No' && params.form[5]==='No')
 {
@@ -60,6 +65,11 @@ if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='Yes' &&
 {
   color='red'
   answer='Should stay at home and contact you!' //hr
+}
+if (params.form[1]==='No' && params.form[2]==='No' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='No')
+{
+  color='grey'
+  answer='Contant your Supervisor or HR' //hr
 }
 
 // const data = ` <p style="color:${color};">${answer} ${username} `
@@ -203,7 +213,7 @@ const data= `<!DOCTYPE html>
 <td class="pad" style="padding-bottom:25px;padding-left:20px;padding-right:20px;padding-top:10px;">
 <div style="font-family: Georgia, 'Times New Roman', serif">
 <div class="" style="font-size: 14px; font-family: Georgia, Times, 'Times New Roman', serif; color: rgb(48, 50, 71); line-height: 1.2;">
-<p style="margin: 0; font-size: 14px; text-align: center;"><span style="font-size:42px;">New Report</span></p>
+<p style="margin: 0; font-size: 14px; text-align: center;"><span style="font-size:42px;">New Report for ${username}!</span></p>
 </div>
 </div>
 </td>
@@ -217,7 +227,7 @@ const data= `<!DOCTYPE html>
 </div>
 </td>
 <div align="center" style="display: block;text-align: center; max-width: 680px;margin-left: 412px; padding: 25px ;background-color: ${color}; color: black;">
-<strong>USERNAME!</strong> ${answer}
+<strong></strong> ${answer}
 </tr>
 </table>
 </td>
@@ -301,8 +311,6 @@ const data= `<!DOCTYPE html>
 <tr>
 <td class="pad">
 <div class="alignment" style="text-align:center;">
-<table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style="  display: inline-block;" width="108px">
-</table>
 </div>
 </td>
 </tr>

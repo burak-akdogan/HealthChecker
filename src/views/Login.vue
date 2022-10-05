@@ -66,8 +66,12 @@ export default {
         console.log(result)
         localStorage.setItem(TOKEN_LOCALSTORAGE_KEY, result.access_token);
         this.$store.dispatch('init').then(() => {
+          console.log(this.$store.state.settings.account)
           const redirect = this.$route.query.redirect;
-          this.$router.push(redirect || '/profile');
+          if(this.$store.state.settings.account.role==='hr')
+          this.$router.push(redirect || '/'+this.$store.state.settings.account.username);
+          else
+          this.$router.push(redirect || '/report');
         });
       } catch (error) {
         this.error = error;

@@ -17,16 +17,16 @@
       <div v-if="step===5">  5) Do you have any of the following symptoms: severe difficulty breathing, chest pain, confusion, extreme drowsiness or loss of consciousness? </div>
       <!-- If yes --- Red  // Not --- (Green) -->
       
-     <div class="d-flex  v-align-middle px-4 py-3" style="background-color:red; color: white;"    v-if="form[1]==='Yes' && form[2]==='Yes' && form[3]==='Yes' && form[4]==='Yes' && form[5]==='Yes' "> <i class="fa-solid fa-triangle-exclamation"></i>  Dear {{account.meta.name}}, Please Stay at home and contact a supervisor.</div>
-<!-- red -->
+     <div class="d-flex  v-align-middle px-4 py-3" style="background-color:red; color: white;" v-if="form[1]==='Yes' && form[2]==='Yes' && form[3]==='Yes' && form[4]==='Yes' && form[5]==='Yes' "> <i class="fa-solid fa-triangle-exclamation"></i>  Dear {{account.meta.name}}, Please Stay at home and contact a supervisor.</div>
+
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:yellow; color: black;" v-else-if="form[1]==='Yes' && form[2]==='Yes' && form[3]==='Yes' && form[4]==='No' && form[5]==='No' "> <i class="fa-solid fa-phone"></i>  Dear {{account.meta.name}}, Please consult your supvervisor!</div>
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:yellow; color: black;" v-else-if="form[1]==='Yes' && form[2]==='No' && form[3]==='Yes' && form[4]==='No' && form[5]==='No' "> <i class="fa-solid fa-phone"></i>  Dear {{account.meta.name}}, Please consult your supvervisor!</div>
-     <div class="d-flex  v-align-middle px-4 py-3" style="background-color:green; color: black;" v-else-if="form[1]==='Yes' && form[2]==='No' && form[3]==='No' && form[4]==='No' && form[5]==='No' "><i class="fa-sharp fa-solid fa-check"></i>  Dear {{account.meta.name}}, Please consult your supvervisor!</div>
+     <div class="d-flex  v-align-middle px-4 py-3" style="background-color:yellow; color: black;" v-else-if="form[1]==='Yes' && form[2]==='No' && form[3]==='No' && form[4]==='No' && form[5]==='No' "><i class="fa-sharp fa-solid fa-check"></i>  Dear {{account.meta.name}}, Please consult your supvervisor!</div>
      
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:green; color: white;" v-else-if="form[1]==='No' && form[2]==='No' && form[3]==='No' && form[4]==='No' && form[5]==='No' "><i class="fa-sharp fa-solid fa-check"></i> Dear {{account.meta.name}},  You are approved to go workplace.</div>
     
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:red; color: white;" v-else-if="form[1]==='Yes' && form[2]==='No' && form[3]==='Yes' && form[4]==='Yes' && form[5]==='No' "><i class="fa-solid fa-triangle-exclamation"></i>  Dear {{account.meta.name}}, Please Stay at home and contact a supervisor.</div>
-     <div class="d-flex  v-align-middle px-4 py-3" style="background-color:blue; color: white;" v-else-if="step>5"><i class="fa-solid fa-phone"></i> Contant your HR</div>
+     <div class="d-flex  v-align-middle px-4 py-3" style="background-color:blue; color: white;" v-else-if="step>5"><i class="fa-solid fa-phone"></i> Dear {{account.meta.name}}, Contant your HR</div>
    
       <br>
       <div v-if="step!==6"><button  class="btn-outline-mktg" @click="setQuestion('Yes')">Yes</button><button class="btn-outline-mktg" @click="setQuestion('No')">No</button></div>
@@ -51,7 +51,8 @@ export default {
       isVerified: !!this.$store.state.settings.account.meta.is_verified,
       lastReport: this.$store.state.settings.report,
       account: this.$store.state.settings.account,
-      submitted: false
+      submitted: false,
+      
     };
   },
   mounted(){
@@ -74,8 +75,28 @@ console.log(this.form)
     },
     async submitReport() {
       try {
+        let color='green'
+         if (this.form[1]==='Yes' && this.form[2]==='Yes' && this.form[3]==='Yes' && this.form[4]==='Yes' && this.form[5]==='Yes' )
+          { 
+             color='red'
+            } else if (this.form[1]==='Yes' && this.form[2]==='No' && this.form[3]==='Yes' && this.form[4]==='No' && this.form[5]==='No')
+            {
+              color='yellow'
+            } else if (this.form[1]==='Yes' && this.form[2]==='No' && this.form[3]==='No' && this.form[4]==='No' && this.form[5]==='No')
+            {
+              color='yellow'
+            } else if (this.form[1]==='No' &&  this.form[2]==='No' &&  this.form[3]==='No' &&  this.form[4]==='No' &&  this.form[5]==='No')
+            {
+              color='green'
+            } else if(this.form[1]==='Yes' && this.form[2]==='No' && this.form[3]==='Yes' && this.form[4]==='Yes' && this.form[5]==='No' )
+            {
+              color='red'
+            } else {color="grey"}
+            
+  
+    //  <div class="d-flex  v-align-middle px-4 py-3" style="background-color:blue; color: white;" v-else-if="step>5"><i class="fa-solid fa-phone"></i> Contant your HR</div>
         this.isLoading = true;
-        const result = await client.request('submit_report',{form:this.form,company_id:this.account.company_id});
+        const result = await client.request('submit_report',{form:this.form,company_id:this.account.company_id,color:color});
         // this.$store.dispatch('init');
         this.submitted = true
       } catch (error) {

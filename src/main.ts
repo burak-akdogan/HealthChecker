@@ -7,6 +7,9 @@ import router from '@/router';
 import store from '@/store';
 import '@vue/ui/dist/vue-ui.css';
 import '@/style.scss';
+import SmartTable from 'vuejs-smart-table'
+
+Vue.use(SmartTable)
 Vue.use(VueUi);
 
 
