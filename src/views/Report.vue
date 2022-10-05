@@ -64,7 +64,7 @@ export default {
       return false
       let today = new Date()
       let oldReport= new Date(this.$store.state.settings.report.created)
-      return (today.getFullYear()===oldReport.getFullYear() && today.getMonth()===oldReport.getMonth() && today.getDate()===oldReport.getDate()) //allow only one time in a day.
+      return (today.getFullYear()===oldReport.getFullYear() && today.getMonth()===oldReport.getMonth() && today.getDate()===oldReport.getDate()) // rep.allow only one time in a day.
     },
   },
   methods: {

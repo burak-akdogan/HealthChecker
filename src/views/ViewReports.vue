@@ -1,17 +1,14 @@
 <template>
-  <div >
-    <Top :title="'Users'" />
-    
-  <div class="d-flex border-bottom py-4"></div>
+  <div class="wrapper">
   <div class="Box-header mx-auto text-center">Users</div>
   <div v-for="user in users" :key="user.id">
-  <div> {{user.username}} {{user.email}}  <router-link :to="'/report/'+user.id">View Reports</router-link> </div>
+  <div style="border: 1px solid black;background-color: #2980b9 ;color:white"> {{user.username}} {{user.email}}  <router-link align="right" class="btn " style="color:black" :to="'/report/'+user.id">View Reports</router-link></div>  
 
   
+
   </div>
   <div class="d-flex border-bottom py-12"></div>
-     </div>
-        
+     </div>  
 </template>
 
 <script>
@@ -21,6 +18,7 @@ export default {
     return {
       users:[],
       account: this.$store.state.settings.account
+      
     };
   },
  async mounted(){

@@ -80,12 +80,15 @@ const data= `<!DOCTYPE html>
 <title></title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"/>
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
-<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet" type="text/css"/>
-<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet" type="text/css"/>
-
+<!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]-->
+<!--[if !mso]><!-->
+<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css"/>
+<!--<![endif]-->
 <style>
 		* {
 			box-sizing: border-box;
@@ -118,7 +121,7 @@ const data= `<!DOCTYPE html>
 			overflow: hidden;
 		}
 
-		@media (max-width:700px) {
+		@media (max-width:670px) {
 
 			.desktop_hide table.icons-inner,
 			.social_block.desktop_hide .social-table {
@@ -133,6 +136,7 @@ const data= `<!DOCTYPE html>
 				margin: 0 auto;
 			}
 
+			.image_block img.big,
 			.row-content {
 				width: 100% !important;
 			}
@@ -159,13 +163,11 @@ const data= `<!DOCTYPE html>
 				display: table !important;
 				max-height: none !important;
 			}
-			
 		}
 	</style>
 </head>
-
-<body style="background-color: #f9f9f9; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
-<table border="0" cellpadding="0" cellspacing="0" class="nl-container" role="presentation" style="background-color: #f9f9f9;" width="100%">
+<body style="background-color: #85a4cd; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
+<table border="0" cellpadding="0" cellspacing="0" class="nl-container" role="presentation" style=" background-color: #85a4cd;" width="100%">
 <tbody>
 <tr>
 <td>
@@ -173,14 +175,62 @@ const data= `<!DOCTYPE html>
 <tbody>
 <tr>
 <td>
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style=" background-color: #465c86; color: #000000; width: 680px;" width="680">
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style=" color: #000000; width: 650px;" width="650">
 <tbody>
 <tr>
-<td class="column column-1" style=" font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
-<table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation"  width="100%">
+<td class="column column-1" style=" font-weight: 400; text-align: left; vertical-align: top; padding-top: 5px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation"  width="100%">
 <tr>
-<td class="pad" style="padding-bottom:10px;padding-top:10px;width:100%;padding-right:0px;padding-left:0px;">
-<div align="center" class="alignment" style="line-height:10px"><img src="https://raw.githubusercontent.com/burak-akdogan/HealthChecker/main/src/assets/logov10.png" style="display: block; height: auto; border: 0; width: 268px; max-width: 100%;" title="Yourlogo Light" width="268"/></div>
+<td class="pad" style="padding-bottom:10px;text-align:center;width:100%;padding-top:60px;">
+
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="image_block block-3" role="presentation"  width="100%">
+<tr>
+<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
+<div align="center" class="alignment" style="line-height:10px"><img alt="Wrong Password Animation" class="big" src="https://raw.githubusercontent.com/burak-akdogan/HealthChecker/main/src/assets/logov10.png" style="display: block; height: auto; border: 0; width: 650px; max-width: 100%;" title="Wrong Password Animation" width="650"/></div>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="text_block block-5" role="presentation" style=" word-break: break-word;" width="100%">
+<tr>
+<td class="pad" style="padding-bottom:5px;padding-left:10px;padding-right:10px;padding-top:25px;">
+<div style="font-family: sans-serif">
+<div class="" style="font-size: 14px; color: #3f4d75; line-height: 1.2; font-family: Roboto Slab, Arial, Helvetica Neue, Helvetica, sans-serif;">
+<p style="margin: 0; font-size: 14px; text-align: center;"><span style="font-size:30px;">New Report from ${username}!</span></p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="text_block block-6" role="presentation" style=" word-break: break-word;" width="100%">
+<tr>
+<td class="pad" style="padding-bottom:5px;padding-left:10px;padding-right:10px;padding-top:5px;">
+<div style="font-family: sans-serif">
+<div class="" style="font-size: 14px; color: #3f4d75; line-height: 1.2; font-family: Roboto Slab, Arial, Helvetica Neue, Helvetica, sans-serif;">
+<p style="margin: 0; font-size: 14px; color: ${color}; text-align: center;"><span style="font-size:22px;">${answer}</span></p>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="button_block block-8" role="presentation"  width="100%">
+<tr>
+<td class="pad" style="padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:30px;text-align:center;">
+<div align="center" class="alignment">
+<a href="http://localhost:8080/viewreports" style="text-decoration:none;display:inline-block;color:#3f4d75;background-color:#ffffff;border-radius:10px;width:auto;border-top:2px solid #3F4D75;font-weight:undefined;border-right:2px solid #3F4D75;border-bottom:2px solid #3F4D75;border-left:2px solid #3F4D75;padding-top:10px;padding-bottom:10px;font-family:Roboto Slab, Arial, Helvetica Neue, Helvetica, sans-serif;text-align:center;word-break:keep-all;" target="_blank"><span style="padding-left:25px;padding-right:25px;font-size:18px;display:inline-block;letter-spacing:normal;"><span style="word-break: break-word;"><span data-mce- style="line-height: 36px;">View Reports</span></span></span></a>
+</div>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class="text_block block-10" role="presentation" style=" word-break: break-word;" width="100%">
+<tr>
+<td class="pad" style="padding-bottom:40px;padding-left:10px;padding-right:10px;padding-top:30px;">
+<div style="font-family: sans-serif">
+<div class="" style="font-size: 14px; color: #3f4d75; line-height: 1.2; font-family: Roboto Slab, Arial, Helvetica Neue, Helvetica, sans-serif;">
+</div>
+</div>
 </td>
 </tr>
 </table>
@@ -192,64 +242,45 @@ const data= `<!DOCTYPE html>
 </tr>
 </tbody>
 </table>
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-2" role="presentation" >
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-2" role="presentation" style=" background-color: #f3f6fe;" width="100%">
 <tbody>
 <tr>
 <td>
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style=" background-color: #cbdbef; color: #000000; width: 680px;" width="680">
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style=" color: #000000; width: 650px;" width="650">
 <tbody>
 <tr>
-<td class="column column-1" style=" font-weight: 400; text-align: left; vertical-align: top; padding-top: 20px; padding-bottom: 20px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
-<table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation"  width="100%">
+<td class="column column-1" style=" font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" class="social_block block-2" role="presentation"  width="100%">
 <tr>
-<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;padding-top:70px;">
-<div align="center" class="alignment" style="line-height:10px"><img alt="Check Icon" src="https://raw.githubusercontent.com/burak-akdogan/HealthChecker/main/src/assets/check-icon.png" style="display: block; height: auto; border: 0; width: 93px; max-width: 100%;" title="Check Icon" width="93"/></div>
+<td class="pad" style="padding-bottom:10px;padding-left:20px;padding-right:20px;padding-top:50px;text-align:center;">
+<div class="alignment" style="text-align:center;">
+<table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style=" display: inline-block;" width="208px">
+<tr>
+<td style="padding:0 10px 0 10px;"><a href="https://www.facebook.com/" target="_blank"><img alt="Facebook" height="32" src="images/facebook2x.png" style="display: block; height: auto; border: 0;" title="facebook" width="32"/></a></td>
+<td style="padding:0 10px 0 10px;"><a href="https://www.twitter.com/" target="_blank"><img alt="Twitter" height="32" src="images/twitter2x.png" style="display: block; height: auto; border: 0;" title="twitter" width="32"/></a></td>
+<td style="padding:0 10px 0 10px;"><a href="https://www.linkedin.com/" target="_blank"><img alt="Linkedin" height="32" src="images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="linkedin" width="32"/></a></td>
+<td style="padding:0 10px 0 10px;"><a href="https://www.instagram.com/" target="_blank"><img alt="Instagram" height="32" src="images/instagram2x.png" style="display: block; height: auto; border: 0;" title="instagram" width="32"/></a></td>
+</tr>
+</table>
+</div>
 </td>
-
 </tr>
 </table>
 <table border="0" cellpadding="0" cellspacing="0" class="text_block block-3" role="presentation" style=" word-break: break-word;" width="100%">
 <tr>
-<td class="pad" style="padding-bottom:25px;padding-left:20px;padding-right:20px;padding-top:10px;">
-<div style="font-family: Georgia, 'Times New Roman', serif">
-<div class="" style="font-size: 14px; font-family: Georgia, Times, 'Times New Roman', serif; color: rgb(48, 50, 71); line-height: 1.2;">
-<p style="margin: 0; font-size: 14px; text-align: center;"><span style="font-size:42px;">New Report for ${username}!</span></p>
-</div>
-</div>
-</td>
-</tr>
-</table>
-<table border="0" cellpadding="0" cellspacing="0" class="text_block block-4" role="presentation" style=" word-break: break-word;" width="100%">
-<tr>
-<td class="pad" style="padding-bottom:80px;padding-left:30px;padding-right:30px;padding-top:10px;">
+<td class="pad" style="padding-bottom:10px;padding-left:20px;padding-right:20px;padding-top:10px;">
 <div style="font-family: sans-serif">
+<div class="" style="font-size: 12px; color: #7999ac; line-height: 1.2; font-family: Roboto Slab, Arial, Helvetica Neue, Helvetica, sans-serif;">
+<p style="margin: 0; font-size: 14px; text-align: center;"><span style="font-size:12px;">By using our website, you confirm that you accept these terms of use and that you agree to comply with them. If you do not agree to these terms of use, you must not use our website. We do not guarantee that our website, or any content on it, will always be available or be uninterrupted or free of defects, errors, or bugs. Our site is made available free of charge.</span></p>
 </div>
 </div>
 </td>
-<div align="center" style="display: block;text-align: center; max-width: 680px;margin-left: 412px; padding: 25px ;background-color: ${color}; color: black;">
-<strong></strong> ${answer}
 </tr>
 </table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<tbody>
+<table border="0" cellpadding="0" cellspacing="0" class="image_block block-4" role="presentation"  width="100%">
 <tr>
-<td>
-<tbody>
-<tr>
-<td class="column column-1" style="  font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 0px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
-<table border="0" cellpadding="0" cellspacing="0" class="text_block block-1" role="presentation" style="  word-break: break-word;" width="100%">
-<tr>
-<div style="font-family: sans-serif">
-<div class="" style="font-size: 14px; font-family: Arial, Helvetica Neue, Helvetica, sans-serif; color: rgb(48, 50, 71); line-height: 1.2;">
-</div>
-</div>
+<td class="pad" style="padding-bottom:40px;padding-left:20px;padding-right:20px;padding-top:10px;width:100%;">
+<div align="center" class="alignment" style="line-height:10px"><img  src="https://raw.githubusercontent.com/burak-akdogan/HealthChecker/main/src/assets/logov10.png" style="display: block; height: auto; border: 0; width: 130px; max-width: 100%;" title="Your Logo" width="130"/></div>
 </td>
 </tr>
 </table>
@@ -261,130 +292,9 @@ const data= `<!DOCTYPE html>
 </tr>
 </tbody>
 </table>
-<tbody>
-<tr>
-<td>
-<tbody>
-<tr>
-<tr>
-</div>
-</div>
 </td>
 </tr>
-</table>
-</td>
-<tbody>
-<tr>
-<td>
-<tbody>
-<tr>
-<tr>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-6" role="presentation"  width="100%">
-<tbody>
-<tr>
-<td>
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="  background-color: #5d77a9; color: #000000; width: 680px;" width="680">
-<tbody>
-<tr>
-<td class="column column-1" style="  font-weight: 400; text-align: left; vertical-align: top; padding-top: 5px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
-<table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" width="100%">
-<tr>
-<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;padding-top:20px;">
-<div align="center" class="alignment" style="line-height:10px"><img alt="Yourlogo Light" src="https://raw.githubusercontent.com/burak-akdogan/HealthChecker/main/src/assets/logov10.png" style="display: block; height: auto; border: 0; width: 204px; max-width: 100%;" title="Yourlogo Light" width="204"/></div>
-</td>
-</tr>
-</table>
-<table border="0" cellpadding="10" cellspacing="0" class="social_block block-3" role="presentation"  width="100%">
-<tr>
-<td class="pad">
-<div class="alignment" style="text-align:center;">
-</div>
-</td>
-</tr>
-</table>
-<table border="0" cellpadding="10" cellspacing="0" class="text_block block-4" role="presentation" style="  word-break: break-word;" width="100%">
-<tr>
-<td class="pad">
-<div style="font-family: sans-serif">
-<div style="font-size: 14px;  color: #f9f9f9; line-height: 0.1; font-family: Arial, Helvetica Neue, Helvetica, sans-serif;">
-<p style="margin: 0; font-size: 12px; text-align: center; "><span style="font-size:12px;">info@healthchecker.com </span></p>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-7" role="presentation" width="100%">
-<tbody>
-<tr>
-<td>
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style=" background-color: #5d77a9; color: #000000; width: 680px;" width="680">
-<tbody>
-<tr>
-<td class="column column-1" style="  font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 20px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
-<table border="0" cellpadding="10" cellspacing="0" class="text_block block-1" role="presentation" style="  word-break: break-word;" width="100%">
-<tr>
-<td class="pad">
-<div style="font-family: sans-serif">
-<div  >
-<p style="margin: 0; font-size: 14px; text-align: center;"><span style="font-size:12px;">2022 © HealthChecker</span></p>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-8" role="presentation"  width="100%">
-<tbody>
-<tr>
-<td>
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="  color: #000000; width: 680px;" width="680">
-<tbody>
-<tr>
-<td class="column column-1" style="  font-weight: 400; text-align: left; vertical-align: top; padding-top: 5px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
-<table border="0" cellpadding="0" cellspacing="0" class="icons_block block-1" role="presentation"  width="100%">
-<tr>
-<td class="pad" style="vertical-align: middle; color: #9d9d9d; font-family: inherit; font-size: 15px; padding-bottom: 5px; padding-top: 5px; text-align: center;">
-<table cellpadding="0" cellspacing="0" role="presentation"  width="100%">
-<tr>
-<td class="alignment" style="vertical-align: middle; text-align: center;">
-<!--[if vml]><table align="left" cellpadding="0" cellspacing="0" role="presentation" style="display:inline-block;padding-left:0px;padding-right:0px;"><![endif]-->
-<!--[if !vml]><!-->
-<table cellpadding="0" cellspacing="0" class="icons-inner" role="presentation" style=" display: inline-block; margin-right: -4px; padding-left: 0px; padding-right: 0px;">
-<!--<![endif]-->
-<tr>
-</tr>
-</table>
-</td>
-</tr>
-</table>
+
 </td>
 </tr>
 </table>
@@ -399,7 +309,7 @@ const data= `<!DOCTYPE html>
 </td>
 </tr>
 </tbody>
-</table><!-- End -->
+</table>
 </body>
 </html>`
 
@@ -409,7 +319,7 @@ await sendEmail(emailTo,data)
 
 router.add('get_report', async (params, tag, ws) => {
   if (!ws.id) return;
-  let query = 'SELECT * FROM reports WHERE user_id = ? ORDER BY created DESC LIMIT 1;';
+  let query = 'SELECT * FROM reports WHERE user_id = ? ORDER BY created  DESC LIMIT 1 ;';
   const result = await db.queryAsync(query, [ws.id]);
   return sendResponse(ws, tag, result);
 });
@@ -435,7 +345,7 @@ router.add('get_subscribers', async (params, tag, ws) => {
   const query = `
     SELECT 
       s.*, 
-      UNIX_TIMESTAMP(s.created) AS created, 
+      UNIX_TIMESTAMP(s.created) AS created , 
       UNIX_TIMESTAMP(s.expired) AS expired, 
       u.username, 
       u.meta AS user_meta

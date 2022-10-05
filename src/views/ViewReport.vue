@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="wrapper">
     <div class="Box-header mx-auto text-center">Reports</div>
     <br>
     <div class="text-center">
       <div class="BtnGroup">
-  <button class="btn BtnGroup-item text-center" style="background-color:green" type="button" @click="filters.name.value='green'">Green</button>
+  <button class="btn BtnGroup-item text-center green" style="background-color:green; " type="button" @click="filters.name.value='green'">Green</button>
   <button class="btn BtnGroup-item text-center" style="background-color:yellow" type="button"  @click="filters.name.value='yellow'">Yellow </button>
-  <button class="btn BtnGroup-item text-center" style="background-color:red" type="button" @click="filters.name.value='red'">Red</button>
+  <button class="btn BtnGroup-item text-center" style="background-color:tomato" type="button" @click="filters.name.value='red'">Red</button>
   <button class="btn BtnGroup-item text-center" type="button" @click="filters.name.value=''">All</button>
       </div>
         </div>
@@ -14,34 +14,30 @@
       <v-table
         :data="reports"
         :currentPage.sync="currentPage"
-        :pageSize="5"
+        :pageSize="4"
         @totalPagesChanged="totalPages = $event"
         :filters="filters"
       >
         <thead slot="head">
-          <th style="border: 1px solid black;background-color: azure;">Report</th>
-          <th style="border: 1px solid black;background-color: azure;">Date</th>
-          <th style="border: 1px solid black;background-color: azure;">Status</th>
+          <th style="border: 1px solid black;background-color: #2980b9 ;color:black">Report</th>
+          <th style="border: 1px solid black;background-color: #2980b9;color:black">Date</th>
+          <th style="border: 1px solid black;background-color: #2980b9;color:black">Status</th>
           
         </thead>
         <tbody slot="body" slot-scope="{displayData}">
         <tr v-for="row in displayData" :key="row.guid">
-          <td>
-      <div class="d-flex v-align-middle px-4 py-3" style="background-color:red; color: white;border: 1px solid black;width: 100%;" v-if="row.meta[1]==='Yes' && row.meta[2]==='Yes' && row.meta[3]==='Yes' && row.meta[4]==='Yes' && row.meta[5]==='Yes' "> Please Stay at home and contact a supervisor.</div>
+          <td >
+      <div class="d-flex v-align-middle px-4 py-3" style="background-color:tomato; color: white;border: 1px solid black;width: 100%;" v-if="row.meta[1]==='Yes' && row.meta[2]==='Yes' && row.meta[3]==='Yes' && row.meta[4]==='Yes' && row.meta[5]==='Yes' "> Please Stay at home and contact a supervisor.</div>
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:yellow; color: black;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='Yes' && row.meta[2]==='Yes' && row.meta[3]==='Yes' && row.meta[4]==='No' && row.meta[5]==='No' "> Please consult your supvervisor!</div>
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:yellow; color: black;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='Yes' && row.meta[2]==='No' && row.meta[3]==='Yes' && row.meta[4]==='No' && row.meta[5]==='No' "> Please consult your supvervisor!</div>
-     <div class="d-flex  v-align-middle px-4 py-3" style="background-color:yellow; color: black;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='Yes' && row.meta[2]==='No' && row.meta[3]==='No' && row.meta[4]==='No' && row.meta[5]==='No' ">Please consult your supvervisor!</div>
-     
+     <div class="d-flex  v-align-middle px-4 py-3" style="background-color:yellow; color: black;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='Yes' && row.meta[2]==='No' && row.meta[3]==='No' && row.meta[4]==='No' && row.meta[5]==='No' ">Please consult your supvervisor!</div> 
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:green; color: white;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='No' && row.meta[2]==='No' && row.meta[3]==='No' && row.meta[4]==='No' && row.meta[5]==='No' ">You are approved to go workplace.</div>
-    
-     <div class="d-flex  v-align-middle px-4 py-3" style="background-color:red; color: white;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='Yes' && row.meta[2]==='No' && row.meta[3]==='Yes' && row.meta[4]==='Yes' && row.meta[5]==='No' ">Please Stay at home and contact a supervisor.</div>
+     <div class="d-flex  v-align-middle px-4 py-3" style="background-color:tomato; color: white;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='Yes' && row.meta[2]==='No' && row.meta[3]==='Yes' && row.meta[4]==='Yes' && row.meta[5]==='No' ">Please Stay at home and contact a supervisor.</div>
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:grey; color: white;border: 1px solid black;width: 100%;" v-else> Contant your HR</div>
           </td>
           <td style="border: 1px solid;width: 30%;background-color: azure;">{{row.created}}</td>
-          <td class="text-center " style="border: 1px solid;background-color:azure;width: 10%;">{{row.color}}</td>
-          
-         
-
+          <td class="text-center " style="border: 1px solid;background-color:azure;width: 10%;" >{{row.color}}</td>
+        
         </tr>
         </tbody>
       </v-table>
@@ -52,7 +48,7 @@
       />
     </div>
 
-<!-- <div >
+<!-- <div > 'Only for Test Purpose'
     <Top :title="'Reports'"/>
  
   <div class="Box-header mx-auto text-center">Reports</div>
@@ -172,6 +168,12 @@ export default {
     border: 1px solid #e1e4e8;
     
     }
-    
-    
+  .wrapper{
+  margin: 0 auto;
+  padding : 20px;
+  max-width: 1000px;
+
+  }
+ 
+
 </style>
