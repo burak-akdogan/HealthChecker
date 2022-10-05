@@ -189,7 +189,7 @@ const data= `<!DOCTYPE html>
 <table border="0" cellpadding="0" cellspacing="0" class="image_block block-3" role="presentation"  width="100%">
 <tr>
 <td class="pad" style="width:100%;padding-right:0px;padding-left:0px;">
-<div align="center" class="alignment" style="line-height:10px"><img alt="Wrong Password Animation" class="big" src="https://raw.githubusercontent.com/burak-akdogan/HealthChecker/main/src/assets/logov10.png" style="display: block; height: auto; border: 0; width: 650px; max-width: 100%;" title="Wrong Password Animation" width="650"/></div>
+<div align="center" class="alignment" style="line-height:10px"><img  class="big" src="https://raw.githubusercontent.com/burak-akdogan/HealthChecker/main/src/assets/logov10.png" style="display: block; height: auto; border: 0; width: 650px; max-width: 100%;" width="650"/></div>
 </td>
 </tr>
 </table>
@@ -255,12 +255,6 @@ const data= `<!DOCTYPE html>
 <td class="pad" style="padding-bottom:10px;padding-left:20px;padding-right:20px;padding-top:50px;text-align:center;">
 <div class="alignment" style="text-align:center;">
 <table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style=" display: inline-block;" width="208px">
-<tr>
-<td style="padding:0 10px 0 10px;"><a href="https://www.facebook.com/" target="_blank"><img alt="Facebook" height="32" src="images/facebook2x.png" style="display: block; height: auto; border: 0;" title="facebook" width="32"/></a></td>
-<td style="padding:0 10px 0 10px;"><a href="https://www.twitter.com/" target="_blank"><img alt="Twitter" height="32" src="images/twitter2x.png" style="display: block; height: auto; border: 0;" title="twitter" width="32"/></a></td>
-<td style="padding:0 10px 0 10px;"><a href="https://www.linkedin.com/" target="_blank"><img alt="Linkedin" height="32" src="images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="linkedin" width="32"/></a></td>
-<td style="padding:0 10px 0 10px;"><a href="https://www.instagram.com/" target="_blank"><img alt="Instagram" height="32" src="images/instagram2x.png" style="display: block; height: auto; border: 0;" title="instagram" width="32"/></a></td>
-</tr>
 </table>
 </div>
 </td>
@@ -270,8 +264,8 @@ const data= `<!DOCTYPE html>
 <tr>
 <td class="pad" style="padding-bottom:10px;padding-left:20px;padding-right:20px;padding-top:10px;">
 <div style="font-family: sans-serif">
-<div class="" style="font-size: 12px; color: #7999ac; line-height: 1.2; font-family: Roboto Slab, Arial, Helvetica Neue, Helvetica, sans-serif;">
-<p style="margin: 0; font-size: 14px; text-align: center;"><span style="font-size:12px;">By using our website, you confirm that you accept these terms of use and that you agree to comply with them. If you do not agree to these terms of use, you must not use our website. We do not guarantee that our website, or any content on it, will always be available or be uninterrupted or free of defects, errors, or bugs. Our site is made available free of charge.</span></p>
+<div class="" style="font-size: 18px; color: #7999ac; line-height: 1.2; font-family: Roboto Slab, Arial, Helvetica Neue, Helvetica, sans-serif;">
+<p style="margin: 0; font-size: 18px; text-align: center;"><span style="font-size:12px;">By using our website, you confirm that you accept these terms of use and that you agree to comply with them. If you do not agree to these terms of use, you must not use our website. We do not guarantee that our website, or any content on it, will always be available or be uninterrupted or free of defects, errors, or bugs. Our site is made available free of charge.</span></p>
 </div>
 </div>
 </td>
@@ -294,7 +288,6 @@ const data= `<!DOCTYPE html>
 </table>
 </td>
 </tr>
-
 </td>
 </tr>
 </table>

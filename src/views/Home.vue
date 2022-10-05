@@ -19,7 +19,7 @@
     </div>
     
 <!-- Section 1  Why is HealthChecker free? -->
-    <div class="anim-fade-in container-lg p-responsive overflow-hidden">
+    <div class="container-lg p-responsive overflow-hidden">
       <div class="overflow-hidden py-10">
         <div class="col-md-6 float-left pr-md-6 pr-lg-6 text-center">
           <img class="bg-blue mx-auto ml-2 hide-sm hide-md rounded-2 border " src="~/@/assets/firstpic.png" style="height: 500px;" />
