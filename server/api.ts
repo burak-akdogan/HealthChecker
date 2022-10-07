@@ -64,15 +64,19 @@ if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='Yes' &&
 if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='No')
 {
   color='red'
-  answer='Should stay at home and contact you!' //hr
+  answer='Should stay at home and contact you!' //hr verified - ALERT
 }
 if (params.form[1]==='No' && params.form[2]==='No' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='No')
 {
   color='grey'
   answer='Contant your Supervisor or HR' //hr
 }
+else {
+  color='grey'
+  answer='Contant your Supervisor or HR' //hr
+}
 
-// const data = ` <p style="color:${color};">${answer} ${username} `
+// const data = ` <p style="color:${color};">${answer} ${username} ` test dev
 const data= `<!DOCTYPE html>
 
 <html lang="en" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
