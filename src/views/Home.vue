@@ -1,6 +1,5 @@
 <template>
   <div>
-    
     <div class="top-0 left-0 p-4 position-absolute" >
     </div>
     <!-- <div class="hero py-6" > -->
@@ -8,6 +7,7 @@
       <div class="container-lg p-responsive pt-10">
         <div class="col-md-5">
           <div></div>
+        
           <img class="eyebrow-mb-2 " src="~/@/assets/logov10.png"><div></div>
           <h2 class="eyebrow-mb-3" style="color:#11639d">Protect Your Employees And Customers.</h2>
           <br>
@@ -123,6 +123,7 @@ export default {
   computed: {   
     isAuthenticated() {
       return this.$store.state.settings.isAuthenticated;
+      
     },
   },
 

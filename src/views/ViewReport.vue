@@ -10,7 +10,7 @@
   <button class="btn BtnGroup-item text-center" type="button" @click="filters.name.value=''">All</button>
       </div>
         </div>
-        <br>
+        
       <v-table
         :data="reports"
         :currentPage.sync="currentPage"
@@ -26,7 +26,7 @@
         </thead>
         <tbody slot="body" slot-scope="{displayData}">
         <tr v-for="row in displayData" :key="row.guid">
-          <td >
+          <td style="width: 80%; max-width: 800px; table-layout: fixed;">
       <div class="d-flex v-align-middle px-4 py-3" style="background-color:tomato; color: white;border: 1px solid black;width: 100%;" v-if="row.meta[1]==='Yes' && row.meta[2]==='Yes' && row.meta[3]==='Yes' && row.meta[4]==='Yes' && row.meta[5]==='Yes' "> Please Stay at home and contact a supervisor.</div>
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:yellow; color: black;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='Yes' && row.meta[2]==='Yes' && row.meta[3]==='Yes' && row.meta[4]==='No' && row.meta[5]==='No' "> Please consult your supvervisor!</div>
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:yellow; color: black;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='Yes' && row.meta[2]==='No' && row.meta[3]==='Yes' && row.meta[4]==='No' && row.meta[5]==='No' "> Please consult your supvervisor!</div>
@@ -35,8 +35,8 @@
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:tomato; color: white;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='Yes' && row.meta[2]==='No' && row.meta[3]==='Yes' && row.meta[4]==='Yes' && row.meta[5]==='No' ">Please Stay at home and contact a supervisor.</div>
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:grey; color: white;border: 1px solid black;width: 100%;" v-else> Contant your HR</div>
           </td>
-          <td style="border: 1px solid;width: 40%;background-color: azure;">{{new Date(row.created).toLocaleString()}}</td>
-           <td class="text-center " style="border: 1px solid;background-color:azure;width: 10%;" >{{row.color}}</td> 
+          <td style="border: 1px solid;background-color: azure; width: 70%; max-width: 700px; table-layout: fixed;">{{new Date(row.created).toLocaleString()}}</td>
+           <td class="text-center " style="border: 1px solid;background-color:azure;width: 70%; max-width: 700px; table-layout: fixed;;" >{{row.color}}</td> 
 
     
         </tr>
@@ -47,6 +47,7 @@
         :totalPages="totalPages"
         
       />
+      <div class="d-flex border-bottom py-13 "></div>
     </div>
 
 <!-- <div > 'Only for Test Purpose'

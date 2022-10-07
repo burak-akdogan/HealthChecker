@@ -1,5 +1,6 @@
 
 <template>
+  
   <div id="app" :class="!isInterface && 'd-flex flex-items-center'">
     <div v-if="isLoading" class="overlay big vue-ui-loading-indicator p-6">
      
