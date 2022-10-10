@@ -71,8 +71,7 @@ if (params.form[1]==='No' && params.form[2]==='No' && params.form[3]==='Yes' && 
   color='grey'
   answer='Contant your Supervisor or HR' //hr
 }
-
-
+//mail
 // const data = ` <p style="color:${color};">${answer} ${username} ` test dev
 const data= `<!DOCTYPE html>
 
