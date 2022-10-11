@@ -76,7 +76,7 @@
     <div style="background-color: green; height: 150px; width:150px;box-shadow: rgba(0, 0, 0, 0.24) 6px 4px 8px;" />
   </div>
   <div class="col-12 col-md-10 d-flex flex-column flex-justify-center flex-items-center flex-md-items-start pl-md-4">
-    <h2>You are approved to go workplace.</h2>
+    <h2>You are Approved to go workplace.</h2>
   </div>
 </div>
 <br>
@@ -86,7 +86,7 @@
     <div style="background-color: yellow; height: 150px; width:150px;box-shadow: rgba(0, 0, 0, 0.24) 6px 3px 8px;" />
   </div>
   <div class="col-12 col-md-10 d-flex flex-column flex-justify-center flex-items-center flex-md-items-start pl-md-4" >
-    <h2>Please consult your supervisor!</h2>
+    <h2>Please Consult Your Supervisor!</h2>
   </div>
 </div>    
 <br>
