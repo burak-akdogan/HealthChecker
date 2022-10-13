@@ -38,7 +38,6 @@
           <td style="border: 1px solid;background-color: azure; width: 70%; max-width: 700px; table-layout: fixed;">{{new Date(row.created).toLocaleString()}}</td>
            <td class="text-center " style="border: 1px solid;background-color:azure;width: 70%; max-width: 700px; table-layout: fixed;;" >{{row.color}}</td> 
 
-    
         </tr>
         </tbody>
       </v-table>

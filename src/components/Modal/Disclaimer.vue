@@ -1,7 +1,7 @@
 <template>
   <Modal :open="open" @close="$emit('close')">
     <form @submit.prevent="handleSubmit" class="px-4 py-6 text-center overflow-y-auto">
-      <h2 class="mb-4">Disclaimer</h2>
+      <h2 class="mb-4">Disclaimer!</h2>
       <p class="text-left mb-4">
         By using our website, you confirm that you accept these terms of use and that you agree to comply with them. If you do not agree to these terms of use, you must not use our website. 
         We do not guarantee that our website, or any content on it, will always be available or be uninterrupted or free of defects, errors, or bugs. Our site is made available free of charge.
