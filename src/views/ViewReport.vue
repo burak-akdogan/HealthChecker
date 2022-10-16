@@ -33,7 +33,7 @@
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:yellow; color: black;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='Yes' && row.meta[2]==='No' && row.meta[3]==='No' && row.meta[4]==='No' && row.meta[5]==='No' "> Please Consult your Supvervisor!</div> 
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:green; color: white;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='No' && row.meta[2]==='No' && row.meta[3]==='No' && row.meta[4]==='No' && row.meta[5]==='No' "> You are Approved to go workplace.</div>
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:tomato; color: white;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='Yes' && row.meta[2]==='No' && row.meta[3]==='Yes' && row.meta[4]==='Yes' && row.meta[5]==='No' ">Please Stay at home and Contact a Supervisor.</div>
-     <div class="d-flex  v-align-middle px-4 py-3" style="background-color:grey; color: white;border: 1px solid black;width: 100%;" v-else> Please Contact your supervisor </div>
+     <div class="d-flex  v-align-middle px-4 py-3" style="background-color:grey; color: white;border: 1px solid black;width: 100%;" v-else> Please Contact Your Supervisor </div>
           </td>
           <td style="border: 1px solid;background-color: azure; width: 70%; max-width: 700px; table-layout: fixed;">{{new Date(row.created).toLocaleString()}}</td>
            <td class="text-center " style="border: 1px solid;background-color:azure;width: 70%; max-width: 700px; table-layout: fixed;;" >{{row.color}}</td> 

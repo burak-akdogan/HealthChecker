@@ -69,7 +69,7 @@ if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='Yes' &&
 if (params.form[1]==='No' && params.form[2]==='No' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='No')
 {
   color='grey'
-  answer='Contact your Supervisor or HR' //hr
+  answer='The employee needs to contact you!' //hr
 }
 //mail
 // const data = ` <p style="color:${color};">${answer} ${username} ` test dev
