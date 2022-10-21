@@ -30,7 +30,7 @@ console.log(username)
 username = username.name
 console.log(username,user)
 
-
+//hr section
 if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='Yes')
 {
   color='red'
@@ -71,8 +71,8 @@ if (params.form[1]==='No' && params.form[2]==='No' && params.form[3]==='Yes' && 
   color='grey'
   answer='The employee needs to contact you!' //hr
 }
-//mail
-// const data = ` <p style="color:${color};">${answer} ${username} ` test dev
+//mail section
+// const data = ` <p style="color:${color};">${answer} ${username} ` test dev mail
 const data= `<!DOCTYPE html>
 
 <html lang="en" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
