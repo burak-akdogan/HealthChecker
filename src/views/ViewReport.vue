@@ -3,7 +3,7 @@
     <div class="Box-header mx-auto text-center">Reports</div>
     <br>
     <div class="text-center">
-      <div class="BtnGroup">
+      <div class="BtnGroup" style="margin-bottom: 10px"> 
   <button class="btn BtnGroup-item text-center green" style="background-color:green; " type="button" @click="filters.name.value='green'">Green</button>
   <button class="btn BtnGroup-item text-center" style="background-color:yellow" type="button"  @click="filters.name.value='yellow'">Yellow </button>
   <button class="btn BtnGroup-item text-center" style="background-color:tomato" type="button" @click="filters.name.value='red'">Red</button>

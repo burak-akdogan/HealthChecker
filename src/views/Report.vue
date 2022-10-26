@@ -42,6 +42,7 @@
 </template>
 
 <script>
+
 import client from '@/helpers/client';
 export default {
   data() {
