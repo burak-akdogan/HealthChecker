@@ -101,7 +101,7 @@
   </div>
 </div></div>
 <br><br>    
-      <!-- Section 2 How works ENDS -->
+      <!-- Section 2 oofset end,  How works ENDS -->
 
 <!-- Section 3 Youtube  -->
 
