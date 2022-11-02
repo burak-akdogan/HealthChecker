@@ -2,7 +2,7 @@
   <div class="wrapper">
   <div class="Box-header mx-auto text-center">Users</div>
   <div v-for="user in users" :key="user.id">
-  <div style="border: 1px solid black;background-color: #2980b9 ;color:white"> {{user.username}} {{user.email}}  <router-link align="right" class="btn " style="color:black" :to="'/report/'+user.id">View Reports</router-link></div>  
+  <div style="border: 1px solid black;background-color:#2980b9;color:white"> {{user.username}} {{user.email}}  <router-link align="right" class="btn " style="color:black" :to="'/report/'+user.id">View Reports</router-link></div>  
 
   
 
