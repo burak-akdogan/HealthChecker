@@ -8,5 +8,4 @@ requireModule.keys().forEach(fileName => {
   const moduleName = camelCase(fileName.replace(/(\.\/|\.ts)/g, ''));
   modules[moduleName] = requireModule(fileName).default;
 });
-
 export default modules;
