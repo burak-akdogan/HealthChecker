@@ -34,4 +34,7 @@ export default {
     setInterval(() => (this.now = Date.now()), 1000);
   }
 };
+
 </script>
+
+
