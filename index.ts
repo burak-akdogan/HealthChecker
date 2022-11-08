@@ -6,6 +6,7 @@ import router from './server/helpers/router';
 import './server/api';
 import './server/auth';
 
+
 export default (app, server) => {
   app.use(bodyParser.json({ limit: '20mb' }));
   app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
