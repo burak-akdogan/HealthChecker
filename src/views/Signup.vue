@@ -72,7 +72,7 @@ export default {
         const values = await signup.validateAsync(this.form);
         const companyExist = await client.request('check_company', values);
        if (Object.keys(companyExist).length === 0) {
-        this.error = 'this company doesnt exist'
+        this.error = 'This Company Doesnt Exist'
         this.isLoading = false
        } else {
         this.error = '';
