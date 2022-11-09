@@ -30,46 +30,51 @@ console.log(username)
 username = username.name
 console.log(username,user)
 
-//hr section
+//hr or supervisor email conditions
 if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='Yes')
 {
   color='red'
-  answer='Should stay at home and contact you!' //hr
+  answer='Should stay at home and contact you!' //hr or supervisor
 }
 if (params.form[1]==='No' && params.form[2]==='No' && params.form[3]==='No' && params.form[4]==='No' && params.form[5]==='No')
 {
   color='Green'
-  answer='Approved to go workplace.' //hr
+  answer='Approved to go workplace.' //hr or supervisor
 }
 if (params.form[1]==='No' && params.form[2]==='Yes' && params.form[3]==='No' && params.form[4]==='Yes' && params.form[5]==='No')
 {
   color='Yellow'
-  answer='Need to consult You!' //hr
+  answer='Need to consult You!' //hr or supervisor
 }
 if (params.form[1]==='Yes' && params.form[2]==='Yes' && params.form[3]==='Yes' && params.form[4]==='No' && params.form[5]==='No')
 {
   color='Yellow'
-  answer='Need to consult You!' //hr
+  answer='Need to consult You!' //hr or supervisor
 }
 if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='No' && params.form[4]==='No' && params.form[5]==='No')
 {
   color='Yellow'
-  answer='Need to consult You!' //hr
+  answer='Need to consult You!' //hr or supervisor
 }
 if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='Yes' && params.form[4]==='No' && params.form[5]==='No')
 {
   color='Yellow'
-  answer='Need to consult You!' //hr
+  answer='Need to consult You!' //hr or supervisor
 }
 if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='No')
 {
   color='red'
-  answer='Should stay at home and contact you!' //hr verified - ALERT
+  answer='Should stay at home and contact you!' //hr or supervisor verified - ALERT
 }
 if (params.form[1]==='No' && params.form[2]==='No' && params.form[3]==='Yes' && params.form[4]==='Yes' && params.form[5]==='No')
 {
   color='grey'
-  answer='The employee needs to contact you!' //hr
+  answer='The employee needs to contact you!' //hr or supervisor
+}
+if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='Yes' && params.form[4]==='No' && params.form[5]==='Yes')
+{
+  color='grey'
+  answer='The employee needs to contact you!' //hr or supervisor
 }
 //mail section
 // const data = ` <p style="color:${color};">${answer} ${username} ` test dev mail
