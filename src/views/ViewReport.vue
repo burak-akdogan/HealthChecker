@@ -14,7 +14,7 @@
       <v-table
         :data="reports"
         :currentPage.sync="currentPage"
-        :pageSize="4"
+        :pageSize="6"
         @totalPagesChanged="totalPages = $event"
         :filters="filters"
       >

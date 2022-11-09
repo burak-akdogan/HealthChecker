@@ -26,7 +26,7 @@
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:green; color: white;" v-else-if="form[1]==='No' && form[2]==='No' && form[3]==='No' && form[4]==='No' && form[5]==='No' "><i class="fa-sharp fa-solid fa-check"></i> Dear {{account.meta.name}},  You are approved to go workplace.</div>
     
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:red; color: white;" v-else-if="form[1]==='Yes' && form[2]==='No' && form[3]==='Yes' && form[4]==='Yes' && form[5]==='No' "><i class="fa-solid fa-triangle-exclamation"></i>  Dear {{account.meta.name}}, Please Stay at home and contact a supervisor.</div>
-     <div class="d-flex  v-align-middle px-4 py-3" style="background-color:grey; color: black;" v-else-if="step>5"><i class="fa-solid fa-phone"></i> Dear {{account.meta.name}}, Contant your HR</div>
+     <div class="d-flex  v-align-middle px-4 py-3" style="background-color:grey; color: black;" v-else-if="step>5"><i class="fa-solid fa-phone"></i> Dear {{account.meta.name}}, Contant your Supervisor or Human Resources</div>
       <br>
       <div v-if="step!==6"><button  class="btn-outline-mktg" @click="setQuestion('Yes')">Yes</button><button class="btn-outline-mktg" @click="setQuestion('No')">No</button></div>
       <br>
