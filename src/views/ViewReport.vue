@@ -3,11 +3,17 @@
     <div class="Box-header mx-auto text-center">Reports</div>
     <br>
     <div class="text-center">
+      <label>Filter by Color:</label>
+      <input class="form-control" v-model="filters.name.value"/>
       <div class="BtnGroup" style="margin-bottom: 10px"> 
+      
+       
+      <br>
   <button class="btn BtnGroup-item text-center green" style="background-color:green; " type="button" @click="filters.name.value='green'">Green</button>
   <button class="btn BtnGroup-item text-center" style="background-color:yellow" type="button"  @click="filters.name.value='yellow'">Yellow </button>
   <button class="btn BtnGroup-item text-center" style="background-color:tomato" type="button" @click="filters.name.value='red'">Red</button>
   <button class="btn BtnGroup-item text-center" type="button" @click="filters.name.value=''">All</button>
+ 
       </div>
         </div>
         
@@ -27,7 +33,7 @@
         <tbody slot="body" slot-scope="{displayData}">
         <tr v-for="row in displayData" :key="row.guid">
           <td style="width: 80%; max-width: 800px; table-layout: fixed;">
-      <div class="d-flex v-align-middle px-4 py-3" style="background-color:tomato; color: white;border: 1px solid black;width: 100%;" v-if="row.meta[1]==='Yes' && row.meta[2]==='Yes' && row.meta[3]==='Yes' && row.meta[4]==='Yes' && row.meta[5]==='Yes' "> Please Stay at Home and Contact a Supervisor.</div>
+      <div class="d-flex v-align-middle px-4 py-3" style="background-color:tomato; color: white;border: 1px solid black;width: 100%;" v-if="row.meta[1]==='Yes' && row.meta[2]==='Yes' && row.meta[3]==='Yes' && row.meta[4]==='Yes' && row.meta[5]==='Yes' ">   Please Stay at Home and Contact a Supervisor.</div> 
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:yellow; color: black;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='Yes' && row.meta[2]==='Yes' && row.meta[3]==='Yes' && row.meta[4]==='No' && row.meta[5]==='No' "> Please Consult your Supervisor!</div>
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:yellow; color: black;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='Yes' && row.meta[2]==='No' && row.meta[3]==='Yes' && row.meta[4]==='No' && row.meta[5]==='No' "> Please Consult your Supervisor!</div>
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:yellow; color: black;border: 1px solid black;width: 100%;" v-else-if="row.meta[1]==='Yes' && row.meta[2]==='No' && row.meta[3]==='No' && row.meta[4]==='No' && row.meta[5]==='No' "> Please Consult your Supervisor!</div> 
