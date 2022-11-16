@@ -25,9 +25,9 @@
         :filters="filters"
       >
         <thead slot="head">
-          <th style="border: 1px solid black;background-color: #2980b9 ;color:black">Report</th>
-          <th style="border: 1px solid black;background-color: #2980b9;color:black">Date</th>
-          <th style="border: 1px solid black;background-color: #2980b9;color:black">Status</th>
+          <th style="border: 1px solid black;background-color: #2980b9 ;color:black"> Report</th>
+          <th style="border: 1px solid black;background-color: #2980b9;color:black"> Date</th>
+          <th style="border: 1px solid black;background-color: #2980b9;color:black"> Status</th>
           
         </thead>
         <tbody slot="body" slot-scope="{displayData}">
