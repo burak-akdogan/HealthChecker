@@ -76,6 +76,11 @@ if (params.form[1]==='Yes' && params.form[2]==='No' && params.form[3]==='Yes' &&
   color='grey'
   answer='The employee needs to contact you!' //hr or supervisor
 }
+if (params.form[1]==='No' && params.form[2]==='Yes' && params.form[3]==='No' && params.form[4]==='No' && params.form[5]==='Yes')
+{
+  color='grey'
+  answer='The employee needs to contact you!' //hr or supervisor
+}
 //mail section
 // const data = ` <p style="color:${color};">${answer} ${username} ` test dev mail
 const data= `<!DOCTYPE html>

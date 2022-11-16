@@ -2,20 +2,22 @@
  
   <div class="wrapper">
   <div class="Box-header mx-auto text-center">Users</div>
- 
-  <!-- <label>Filter by Color:</label>  
-  <input class="form-control" v-model="user.id"/> -->
-    
+
+  <label>Filter by Color:</label>
+  <input class="form-control" v-model="filters"/>
   <div v-for="user in users" :key="user.id">
+
+  <div style="border: 1px solid black;background-color:#2980b9;color:white"> {{user.username}} {{user.email}}
+  <router-link  class="btn " style="color:black;" :to="'/report/'+user.id">View Reports</router-link></div> 
+    <div> 
     
-  <div style="border: 1px solid black;background-color:#2980b9;color:white"> {{user.username}} {{user.email}} <router-link align="right" class="btn " style="color:black" :to="'/report/'+user.id">View Reports</router-link></div>  
-
-  
-
+</div>  
   </div>
+  
   <div class="d-flex border-bottom py-12"></div>
   
   <div class="Box-header mx-auto text-center">Total </div>
+ 
   <!-- <div>
   <table>
 <br>
@@ -27,11 +29,13 @@
   
   </table>
 </div> -->
+
      </div>  
      
 </template>
 
 <script>
+
 import client from '@/helpers/client';
 export default {
   data() {

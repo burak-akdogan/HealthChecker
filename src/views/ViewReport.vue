@@ -3,11 +3,12 @@
     <div class="Box-header mx-auto text-center">Reports</div>
     <br>
     <div class="text-center">
+      <!-- color search -->
       <label>Filter by Color:</label>
       <input class="form-control" v-model="filters.name.value"/>
       <div class="BtnGroup" style="margin-bottom: 10px"> 
       
-       
+       <!-- button filter -->
       <br>
   <button class="btn BtnGroup-item text-center green" style="background-color:green; " type="button" @click="filters.name.value='green'">Green</button>
   <button class="btn BtnGroup-item text-center" style="background-color:yellow" type="button"  @click="filters.name.value='yellow'">Yellow </button>
@@ -16,7 +17,7 @@
  
       </div>
         </div>
-        
+        <!-- pagination -->
       <v-table
         :data="reports"
         :currentPage.sync="currentPage"
