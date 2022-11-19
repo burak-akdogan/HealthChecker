@@ -16,7 +16,7 @@ router.add('submit_report', async (params, tag, ws) => {
     color:params.color
   };
 await db.queryAsync('INSERT INTO reports SET ?;', [post]);
-  const email= await db.queryAsync("SELECT email FROM users WHERE company_id =  ? AND role='hr';", [params.company_id]);
+const email= await db.queryAsync("SELECT email FROM users WHERE company_id =  ? AND role='hr';", [params.company_id]);
 console.log(email[0].email)
 const emailTo = email[0].email
 let color = "red"
