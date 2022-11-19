@@ -5,7 +5,7 @@
     <div class="Box-header d-flex border-bottom v-align-middle px-4 py-3 text-red" v-if="hasReported">You already reported today!</div>
     <div v-else>
       <div class="Box-header">
-
+<!-- Quiz section -->
       <div v-if="step===1">  1)	Have you travelled internationally in the last 14 days?</div> 
       <!-- If yes --- Yellow  // Not --- (Green) -->
       <div v-if="step===2">  2) Are you currently awaiting results from a COVID-19 test?</div>   
