@@ -50,24 +50,9 @@
       </v-table>
       <smart-pagination
         :currentPage.sync="currentPage"
-        :totalPages="totalPages"
-        
-      />
+        :totalPages="totalPages"/>
       <div class="d-flex border-bottom py-13 "></div>
     </div>
-
-<!-- <div > 'Only for Test Purpose'
-    <Top :title="'Reports'"/>
- 
-  <div class="Box-header mx-auto text-center">Reports</div>
-  <div  v-for="report in reports" :key="report.report_id" >
-
-  {{report.meta}}
-  {{report.created}}
-  </div>
-  <div class="d-flex border-bottom py-12"></div>
-     </div> -->
-   
 </template>
 
 <script>
