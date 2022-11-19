@@ -10,3 +10,6 @@ const store = new Vuex.Store({
 });
 
 export default store;
+
+
+//vue store management

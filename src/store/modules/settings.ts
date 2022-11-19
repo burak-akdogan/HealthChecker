@@ -8,8 +8,6 @@ const state = {
   isAuthenticated: false,
   token: false,
   account: false,
-  subscriptions: [],
-  subscribers: false,
   report: {},
   profiles: {}
 };
@@ -21,16 +19,13 @@ const mutations = {
   isLoading(_state, payload) {
     Vue.set(_state, 'isLoading', payload);
   },
-  login(_state, { account, subscriptions, likes, token }) {
+  login(_state, { account, token }) {
     Vue.set(_state, 'account', account);
-    Vue.set(_state, 'subscriptions', subscriptions);
-    Vue.set(_state, 'likes', likes);
     Vue.set(_state, 'isAuthenticated', true);
     Vue.set(_state, 'token', token);
   },
   logout(_state) {
     Vue.set(_state, 'account', false);
-    Vue.set(_state, 'subscriptions', []);
     Vue.set(_state, 'isAuthenticated', false);
     Vue.set(_state, 'token', false);
   },
@@ -41,9 +36,6 @@ const mutations = {
   addProfile(_state, { username, user }) {
     Vue.set(_state.profiles, username, user);
   },
-  addSubscribers(_state, payload) {
-    Vue.set(_state, 'subscribers', payload);
-  }
 };
 
 const actions = {
@@ -55,16 +47,16 @@ const actions = {
     commit('isInit');
   },
   login: ({ commit }) => {
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       const token = localStorage.getItem(TOKEN_LOCALSTORAGE_KEY);
       if (!token) return resolve();
       client
         .request('verify', token)
         .then(result => {
           // @ts-ignore
-          const { account, subscriptions, likes } = result;
+          const { account } = result;
           account.meta = JSON.parse(account.meta);
-          commit('login', { account, subscriptions, likes, token });
+          commit('login', { account,  token });
           resolve();
         })
         .catch(() => {
@@ -79,7 +71,7 @@ const actions = {
     commit('logout');
   },
   getReport: ({ commit }) => {
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       client.request('get_report').then(report => {
         commit('addReport',report[0]);
         resolve();
@@ -87,21 +79,14 @@ const actions = {
     });
   },
   getProfile: ({ commit }, username) => {
-    return new Promise((resolve, reject) => {
+    return new Promise<void>((resolve, reject) => {
       client.request('get_profile', username).then(user => {
         commit('addProfile', { username, user });
         resolve();
       });
     });
   },
-  getSubscribers: ({ commit }) => {
-    return new Promise((resolve, reject) => {
-      client.request('get_subscribers').then(result => {
-        commit('addSubscribers', result);
-        resolve();
-      });
-    });
-  }
+  
 };
 
 export default {
@@ -109,3 +94,4 @@ export default {
   mutations,
   actions
 };
+//vue store management

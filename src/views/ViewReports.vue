@@ -3,31 +3,40 @@
   <div class="wrapper">
   <div class="Box-header mx-auto text-center">Users</div>
 
-  <!-- <label>Filter by Color:</label>
-  <input class="form-control" v-model="filters"/> -->
-  <div v-for="user in users" :key="user.id">
-
-  <div style="border: 1px solid black;background-color:#2980b9;color:white"> {{user.username}} {{user.email}}
-  <router-link  class="btn " style="color:black;" :to="'/report/'+user.id">View Reports</router-link></div> 
-    <div> 
-    
-</div>  
-  </div>
+  <v-table
+        :data="users"
+        :currentPage.sync="currentPage"
+        :pageSize="6"
+        @totalPagesChanged="totalPages = $event"
+        :filters="filters"
+      >
+        <thead slot="head">
+          <th style="border: 1px solid black;background-color: #2980b9 ;color:black"> Username</th>
+          <th style="border: 1px solid black;background-color: #2980b9;color:black"> Contact</th>
+          <th style="border: 1px solid black;background-color: #2980b9;color:black"> Action</th>
+          
+        </thead>
+        <tbody slot="body" slot-scope="{displayData}">
+        <tr v-for="row in displayData" :key="row.guid">
+          <td style="border: 1px solid;background-color:azure; width: 80%; max-width: 800px; table-layout: fixed;">{{row.meta.name}}</td>
+           <td class="text-center " style="border: 1px solid;background-color:azure;width: 70%; max-width: 700px; table-layout: fixed;" >{{row.email}}</td> 
+          <td><router-link  class="btn " style="color:black; background-color: #008CBA;" :to="'/report/'+row.id">View Reports</router-link></td>
+        </tr>
+        </tbody>
+      </v-table>
+      <smart-pagination
+        :currentPage.sync="currentPage"
+        :totalPages="totalPages"/>
+      <div class="d-flex border-bottom py-13 "></div>
+ 
   
   <div class="d-flex border-bottom py-6"></div>
   <div class="Box-header mx-auto text-center">Total </div>
+
+
+  <Chart :chartData="data"/>
  
-  <!-- <div>
-  <table>
-<br>
-    <div class="flash flash-full flash-success"> GO  GOGOGOG</div> 
-    <br>
-    <div class="flash flash-full flash-warn"> warning  warningwarningwarning</div>
-    <br>
-    <div class="flash flash-full flash-error"> ALERT ALERTALERTALERT</div>
-  
-  </table>
-</div> -->
+ 
 
      </div>  
      
@@ -40,17 +49,45 @@ export default {
   data() {
     return {
       users:[],
+      reports:{},
+      
+      data:{
+        labels: [],
+        datasets: [
+          {
+            backgroundColor: [],
+            data: []
+          }
+        ]
+      },
       account: this.$store.state.settings.account,
+      currentPage: 1,
+      totalPages: 0,
       filters: {
-      name: { value: '', keys: ['user.username'] }
+      name: { value: '', keys: ['color'] }
     }
       
     };
   },
  async mounted(){
-    this.users = await client.request('get_users',this.account.company_id) 
-    
+
+    const tempusers = await client.request('get_users',this.account.company_id) 
+    tempusers.forEach(element => {
+      try {
+        element.meta=JSON.parse(element.meta)
+      } catch (error) {
+        console.log(error)
+      }
+this.users.push(element)
+    });
+    this.reports =await client.request('get_all_reports',this.account.company_id) 
+    this.reports.forEach(element => {
+      this.data.labels.push(element.color)
+      this.data.datasets[0].data.push(element.count)
+      this.data.datasets[0].backgroundColor.push(element.color)
+    });
     console.log(this.users) 
+    console.log(this.reports) 
   },
   
   

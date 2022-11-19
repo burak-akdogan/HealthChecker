@@ -20,3 +20,6 @@ export const justsaying = (ws, subject, body) => {
   const payload = { subject, body };
   sendMessage(ws, 'justsaying', payload);
 };
+
+
+//websocket functions/impl. server side

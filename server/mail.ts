@@ -1,8 +1,8 @@
 import Mailjet, { SendEmailV3_1 } from 'node-mailjet'
-
+const senderEmail =process.env.SENDER_EMAIL || ''
 const mailjet = new Mailjet({
-    apiKey: '847188755cc361182290e7ac382bb3cb',
-    apiSecret: 'b00fe4c05bcba9ce5e196cb1ea604414'
+    apiKey: process.env.MAILJET_KEY,
+    apiSecret: process.env.MAILJET_SECRET
 });
 export const sendEmail = async (to,report) => {
 (async () => {
@@ -10,7 +10,7 @@ export const sendEmail = async (to,report) => {
     Messages: [
       {
         From: {
-          Email: 'bakdogan@na.edu',
+          Email: senderEmail,
         },	
         
         To: [

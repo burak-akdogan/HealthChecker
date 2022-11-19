@@ -21,3 +21,5 @@ export default {
   mutations,
   actions
 };
+
+//vue store management

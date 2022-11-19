@@ -23,3 +23,6 @@ export const verify = async (req, res, next) => {
     res.status(500).json({ error: 'invalid access_token' });
   }
 };
+
+
+//jsonwebtoken lib. for login for secure connect token verify. 
