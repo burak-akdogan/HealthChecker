@@ -349,6 +349,7 @@ router.add('get_users', async (params, tag, ws) => {
   const result = await db.queryAsync(query, [params]);
   return sendResponse(ws, tag, result);
 });
+//chart dashboard.
 
 router.add('get_all_reports', async (params, tag, ws) => {
   if (!ws.id) return;
