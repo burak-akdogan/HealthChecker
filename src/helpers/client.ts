@@ -21,4 +21,4 @@ client.ws.addEventListener('close', () => {
 
 export default client;
 
-//kbyte light websocket client side
+//kbyte light version client  websocket
