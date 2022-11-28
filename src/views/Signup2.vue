@@ -81,7 +81,7 @@ export default {
       try {
         const result = await client.request('signup2', values);
         localStorage.setItem(TOKEN_LOCALSTORAGE_KEY, result.access_token);
-        this.$store.dispatch('init').then(() => this.$router.push('/report'));
+        this.$store.dispatch('init').then(() => this.$router.push('/viewreports'));
       } catch (error) {
         this.error = error;
         this.isLoading = false;

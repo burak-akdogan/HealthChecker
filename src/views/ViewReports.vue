@@ -1,8 +1,8 @@
 <template>
- 
+ <!-- View All users here-->
   <div class="wrapper">
-  <div class="Box-header mx-auto text-center">Users</div>
-
+  <div class="Box-header mx-auto text-center">Users </div>
+<!-- pagination -->
   <v-table
         :data="users"
         :currentPage.sync="currentPage"
@@ -11,16 +11,16 @@
         :filters="filters"
       >
         <thead slot="head">
-          <th style="border: 1px solid black;background-color: #2980b9 ;color:black"> Username</th>
-          <th style="border: 1px solid black;background-color: #2980b9;color:black"> Contact</th>
-          <th style="border: 1px solid black;background-color: #2980b9;color:black"> Action</th>
+          <th style="width:30%;border: 1px solid black;background-color: #2980b9 ;color:black"> Username</th>
+          <th style="width:100%;border: 1px solid black;background-color: #2980b9;color:black"> Contact</th>
+          <th style="width:100%;border: 1px solid black;background-color: #2980b9;color:black"> Action</th>
           
         </thead>
         <tbody slot="body" slot-scope="{displayData}">
         <tr v-for="row in displayData" :key="row.guid">
-          <td style="border: 1px solid;background-color:azure; width: 80%; max-width: 800px; table-layout: fixed;">{{row.meta.name}}</td>
-           <td class="text-center " style="border: 1px solid;background-color:azure;width: 70%; max-width: 700px; table-layout: fixed;" >{{row.email}}</td> 
-          <td><router-link  class="btn " style="color:black; background-color: #008CBA;" :to="'/report/'+row.id">View Reports</router-link></td>
+          <td style="border: 1px solid;background-color:azure; max-width: 800px; table-layout: fixed;">{{row.meta.name}}</td>
+           <td class="text-left " style="height: 40px;border: 1px solid;background-color:azure;width: 70%; max-width: 700px; table-layout: fixed;" >{{row.email}}</td> 
+          <td><router-link  class="btn btn-primary" style="color: black;" :to="'/report/'+row.id">View Reports</router-link></td>
         </tr>
         </tbody>
       </v-table>
@@ -29,8 +29,8 @@
         :totalPages="totalPages"/>
       <div class="d-flex border-bottom py-13 "></div>
  
-  
-  <div class="d-flex border-bottom py-6"></div>
+  <!-- https://vue-chartjs.org/ ref  Chart -->
+  <div class="d-flex border-bottom py-1"></div>
   <div class="Box-header mx-auto text-center">Total </div>
 
 

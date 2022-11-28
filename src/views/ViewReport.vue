@@ -1,13 +1,14 @@
 <template>
+    <!-- view selected user reports  -->
   <div class="wrapper">
-    <div class="Box-header mx-auto text-center">Reports</div>
+    <div class="Box-header mx-auto text-center">Reports </div>
     <br>
     <div class="text-center">
       <!-- color search -->
       <label>Search by Color:</label>
       <input class="form-control" v-model="filters.name.value"/>
       <div class="BtnGroup" style="margin-bottom: 10px"> 
-      
+        
        <!-- button filter -->
       <br>
   <button class="btn BtnGroup-item text-center green" style="background-color:green; " type="button" @click="filters.name.value='green'">Green</button>
@@ -29,7 +30,7 @@
           <th style="border: 1px solid black;background-color: #2980b9 ;color:black"> Report</th>
           <th style="border: 1px solid black;background-color: #2980b9;color:black"> Date</th>
           <th style="border: 1px solid black;background-color: #2980b9;color:black"> Status</th>
-          
+         
         </thead>
         <tbody slot="body" slot-scope="{displayData}">
         <tr v-for="row in displayData" :key="row.guid">
