@@ -1,4 +1,5 @@
 <template>
+  <!-- Register my company(supervisor) -->
   <div class="container-sm p-responsive">
     <div class="text-center mb-4">
       <img class="anim-pulse" src="~/@/assets/logov10.png" style="max-width: 480px;" />
