@@ -16,7 +16,7 @@
       <!-- If yes --- Red  // Not --- (Green) -->
       <div v-if="step===5">  5) Do you have any of the following symptoms: severe difficulty breathing, chest pain, confusion, extreme drowsiness or loss of consciousness? </div>
       <!-- If yes --- Red  // Not --- (Green) -->
-      
+      <!-- Giving a result for employee -->
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:red; color: white;" v-if="form[1]==='Yes' && form[2]==='Yes' && form[3]==='Yes' && form[4]==='Yes' && form[5]==='Yes' "> <i class="fa-solid fa-triangle-exclamation"></i>  Dear {{account.meta.name}}, Please Stay at home and contact a supervisor.</div>
 
      <div class="d-flex  v-align-middle px-4 py-3" style="background-color:yellow; color: black;" v-else-if="form[1]==='Yes' && form[2]==='Yes' && form[3]==='Yes' && form[4]==='No' && form[5]==='No' "> <i class="fa-solid fa-phone"></i>  Dear {{account.meta.name}}, Please consult your supvervisor!</div>
