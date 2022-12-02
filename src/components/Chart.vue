@@ -66,7 +66,6 @@
         default: () => {}
       }
      
-  
     },
     data() {
       return {

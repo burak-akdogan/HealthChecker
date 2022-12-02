@@ -2,7 +2,7 @@
   <div>
     <div class="top-0 left-0 p-4 position-absolute" >
     </div>
-    <!-- <div class="hero py-6" > -->
+    
       <div class="hero py-2" >
       <div class="container-lg p-responsive pt-10">
         <div class="col-md-4">
@@ -101,10 +101,9 @@
   </div>
 </div></div>
 <br><br>    
-      <!-- Section 2 oofset end,  How works ENDS -->
+ <!-- Section 2 oofset end,  How works ENDS -->
 
 <!-- Section 3 Youtube  -->
-
       <div class="overflow-hidden py-10 border-top">
         <div class="col-md-6 float-left pr-md-6 pr-lg-6 mb-6"  style="padding-left: 3%" >
           <iframe  width="890" height="500" src="https://www.youtube.com/embed/bPITHEiFWLc" style="text-align:center"></iframe>
