@@ -71,6 +71,7 @@ export default {
       try {
         this.isLoading = true;
         const values = await signup.validateAsync(this.form);
+        // CompanyID check for employee reg.
         const companyExist = await client.request('check_company', values);
        if (Object.keys(companyExist).length === 0) {
         this.error = 'This Company does not exist'

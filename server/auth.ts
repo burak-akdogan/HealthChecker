@@ -105,6 +105,7 @@ router.add('verify', async (params, tag, ws) => {
   }
 });
 
+// Registration as employee
 router.add('check_company', async (params, tag, ws) => {  
   let query = 'SELECT *  FROM companies WHERE company_id = ? LIMIT 1;';
   try {
