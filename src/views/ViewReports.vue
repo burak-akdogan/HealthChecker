@@ -32,8 +32,6 @@
   <!-- https://vue-chartjs.org/ ref  Chart -->
   <div class="d-flex border-bottom py-1"></div>
   <div class="Box-header mx-auto text-center">Total </div>
-
-
   <Chart :chartData="data"/>
  
  
